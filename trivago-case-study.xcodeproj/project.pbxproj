@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8928C48C869835FE7C75A76D /* Pods_trivago_case_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32A104107019DBB98693F3D /* Pods_trivago_case_study.framework */; };
 		E01FA5C81D4A52DA00408C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5C71D4A52DA00408C01 /* AppDelegate.swift */; };
 		E01FA5CA1D4A52DA00408C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5C91D4A52DA00408C01 /* ViewController.swift */; };
 		E01FA5CD1D4A52DA00408C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01FA5CB1D4A52DA00408C01 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75172CC6ABC4BDB37F5E1E2A /* Pods-trivago-case-study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trivago-case-study.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trivago-case-study/Pods-trivago-case-study.debug.xcconfig"; sourceTree = "<group>"; };
+		878F6020D96DF35043533E8E /* Pods-trivago-case-study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trivago-case-study.release.xcconfig"; path = "Pods/Target Support Files/Pods-trivago-case-study/Pods-trivago-case-study.release.xcconfig"; sourceTree = "<group>"; };
+		A32A104107019DBB98693F3D /* Pods_trivago_case_study.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trivago_case_study.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01FA5C41D4A52DA00408C01 /* trivago-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trivago-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01FA5C71D4A52DA00408C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01FA5C91D4A52DA00408C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8928C48C869835FE7C75A76D /* Pods_trivago_case_study.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112BE5A18BEB8808CDAF413E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32A104107019DBB98693F3D /* Pods_trivago_case_study.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84330974B4497D54FE0548A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75172CC6ABC4BDB37F5E1E2A /* Pods-trivago-case-study.debug.xcconfig */,
+				878F6020D96DF35043533E8E /* Pods-trivago-case-study.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E01FA5BB1D4A52D900408C01 = {
 			isa = PBXGroup;
 			children = (
 				E01FA5C61D4A52DA00408C01 /* trivago-case-study */,
 				E01FA5C51D4A52DA00408C01 /* Products */,
+				84330974B4497D54FE0548A9 /* Pods */,
+				112BE5A18BEB8808CDAF413E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,38 @@
 		E01FA5C61D4A52DA00408C01 /* trivago-case-study */ = {
 			isa = PBXGroup;
 			children = (
-				E01FA5C71D4A52DA00408C01 /* AppDelegate.swift */,
-				E01FA5C91D4A52DA00408C01 /* ViewController.swift */,
-				E01FA5CB1D4A52DA00408C01 /* Main.storyboard */,
+				E01FA5D91D4A712100408C01 /* Model */,
+				E01FA5DA1D4A712D00408C01 /* View */,
+				E01FA5DB1D4A713100408C01 /* Controller */,
 				E01FA5CE1D4A52DA00408C01 /* Assets.xcassets */,
-				E01FA5D01D4A52DA00408C01 /* LaunchScreen.storyboard */,
 				E01FA5D31D4A52DA00408C01 /* Info.plist */,
 			);
 			path = "trivago-case-study";
+			sourceTree = "<group>";
+		};
+		E01FA5D91D4A712100408C01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E01FA5DA1D4A712D00408C01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E01FA5CB1D4A52DA00408C01 /* Main.storyboard */,
+				E01FA5D01D4A52DA00408C01 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E01FA5DB1D4A713100408C01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E01FA5C71D4A52DA00408C01 /* AppDelegate.swift */,
+				E01FA5C91D4A52DA00408C01 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FA5D61D4A52DA00408C01 /* Build configuration list for PBXNativeTarget "trivago-case-study" */;
 			buildPhases = (
+				B67AB906CC19C7C358B039D4 /* [CP] Check Pods Manifest.lock */,
 				E01FA5C01D4A52DA00408C01 /* Sources */,
 				E01FA5C11D4A52DA00408C01 /* Frameworks */,
 				E01FA5C21D4A52DA00408C01 /* Resources */,
+				FBFC2B5F7E92B5142670AABB /* [CP] Embed Pods Frameworks */,
+				4C28337E1FE84C87387FA2FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +180,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C28337E1FE84C87387FA2FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trivago-case-study/Pods-trivago-case-study-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B67AB906CC19C7C358B039D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBFC2B5F7E92B5142670AABB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trivago-case-study/Pods-trivago-case-study-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E01FA5C01D4A52DA00408C01 /* Sources */ = {
@@ -247,6 +346,7 @@
 		};
 		E01FA5D71D4A52DA00408C01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75172CC6ABC4BDB37F5E1E2A /* Pods-trivago-case-study.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "trivago-case-study/Info.plist";
@@ -258,6 +358,7 @@
 		};
 		E01FA5D81D4A52DA00408C01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 878F6020D96DF35043533E8E /* Pods-trivago-case-study.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "trivago-case-study/Info.plist";
@@ -286,6 +387,7 @@
 				E01FA5D81D4A52DA00408C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
