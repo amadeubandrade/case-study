@@ -13,6 +13,8 @@
 		E01FA5CD1D4A52DA00408C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01FA5CB1D4A52DA00408C01 /* Main.storyboard */; };
 		E01FA5CF1D4A52DA00408C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01FA5CE1D4A52DA00408C01 /* Assets.xcassets */; };
 		E01FA5D21D4A52DA00408C01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01FA5D01D4A52DA00408C01 /* LaunchScreen.storyboard */; };
+		E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5DC1D4A845400408C01 /* BorderedShadowedView.swift */; };
+		E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E01FA5CE1D4A52DA00408C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E01FA5D11D4A52DA00408C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01FA5D31D4A52DA00408C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01FA5DC1D4A845400408C01 /* BorderedShadowedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedShadowedView.swift; sourceTree = "<group>"; };
+		E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		E01FA5D91D4A712100408C01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				E01FA5CB1D4A52DA00408C01 /* Main.storyboard */,
 				E01FA5D01D4A52DA00408C01 /* LaunchScreen.storyboard */,
+				E01FA5DC1D4A845400408C01 /* BorderedShadowedView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 			files = (
 				E01FA5CA1D4A52DA00408C01 /* InitialVC.swift in Sources */,
 				E01FA5C81D4A52DA00408C01 /* AppDelegate.swift in Sources */,
+				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
+				E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
