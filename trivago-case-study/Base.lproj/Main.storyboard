@@ -18,66 +18,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-Ih-Nir">
-                                <rect key="frame" x="20" y="84" width="560" height="496"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-Ih-Nir">
+                                <rect key="frame" x="5" y="69" width="590" height="526"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularMovieCell" rowHeight="102" id="7Cm-qi-4lw" customClass="PopularMovieCell" customModule="trivago_case_study" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularMovieCell" rowHeight="128" id="7Cm-qi-4lw" customClass="PopularMovieCell" customModule="trivago_case_study" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="590" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Cm-qi-4lw" id="MEV-Rt-I9h">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="101"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="590" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-hL-mdH" userLabel="container" customClass="BorderedShadowedView" customModule="trivago_case_study" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="544" height="82"/>
+                                                    <rect key="frame" x="8" y="8" width="574" height="112"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5El-pb-t0J" userLabel="movieInfoSV">
-                                                            <rect key="frame" x="20" y="17" width="479" height="49"/>
+                                                            <rect key="frame" x="20" y="33" width="534" height="47"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-0p-n2a">
-                                                                    <rect key="frame" x="144" y="0.0" width="192" height="23"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                    <rect key="frame" x="165" y="0.0" width="204" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2010)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-db-pbb">
-                                                                    <rect key="frame" x="216" y="28" width="48" height="21"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="Sag-9K-OAC"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="243" y="26" width="48" height="21"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-cE-2qA">
-                                                            <rect key="frame" x="509" y="28" width="25" height="25"/>
-                                                        </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="576-vZ-nVN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="499" height="82"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="554" height="112"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-cE-2qA">
+                                                            <rect key="frame" x="556" y="43" width="16" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="AS5-JR-xtY"/>
+                                                                <constraint firstAttribute="width" constant="16" id="fgs-VJ-fwc"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="576-vZ-nVN" secondAttribute="trailing" constant="10" id="0y4-h0-vBj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="DMO-cE-2qA" secondAttribute="trailing" constant="10" id="547-6Q-7hR"/>
                                                         <constraint firstItem="576-vZ-nVN" firstAttribute="top" secondItem="ix8-hL-mdH" secondAttribute="top" id="BdK-o4-gCe"/>
-                                                        <constraint firstAttribute="bottom" secondItem="5El-pb-t0J" secondAttribute="bottom" constant="16" id="FSr-3c-cgl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DMO-cE-2qA" secondAttribute="trailing" constant="2" id="FGP-hr-1gb"/>
                                                         <constraint firstItem="DMO-cE-2qA" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="I1Q-8l-PFt"/>
                                                         <constraint firstItem="5El-pb-t0J" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" constant="20" id="MT5-HM-Qak"/>
-                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="5El-pb-t0J" secondAttribute="trailing" constant="10" id="OLl-DB-tHh"/>
+                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="5El-pb-t0J" secondAttribute="trailing" constant="2" id="R9b-x7-frV"/>
                                                         <constraint firstAttribute="bottom" secondItem="576-vZ-nVN" secondAttribute="bottom" id="aFg-Bv-bSB"/>
                                                         <constraint firstItem="576-vZ-nVN" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" id="cYy-DL-CRV"/>
-                                                        <constraint firstItem="5El-pb-t0J" firstAttribute="top" secondItem="ix8-hL-mdH" secondAttribute="top" constant="17" id="vTP-1U-vff"/>
+                                                        <constraint firstItem="5El-pb-t0J" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="jh2-WN-Wyi"/>
+                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="576-vZ-nVN" secondAttribute="trailing" constant="2" id="teE-xH-bCj"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ix8-hL-mdH" firstAttribute="top" secondItem="MEV-Rt-I9h" secondAttribute="topMargin" id="2lm-rD-Iyi"/>
                                                 <constraint firstItem="ix8-hL-mdH" firstAttribute="leading" secondItem="MEV-Rt-I9h" secondAttribute="leadingMargin" id="8vg-Ki-jlU"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ix8-hL-mdH" secondAttribute="bottom" constant="3" id="DLj-Zn-oFp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ix8-hL-mdH" secondAttribute="bottom" id="DLj-Zn-oFp"/>
                                                 <constraint firstItem="ix8-hL-mdH" firstAttribute="trailing" secondItem="MEV-Rt-I9h" secondAttribute="trailingMargin" id="d33-SG-MRi"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -97,10 +97,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cFc-Ih-Nir" secondAttribute="trailing" constant="20" id="9sc-E8-1Op"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFc-Ih-Nir" secondAttribute="bottom" constant="20" id="DM0-qi-ohf"/>
-                            <constraint firstItem="cFc-Ih-Nir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="E6Q-ub-I1s"/>
-                            <constraint firstItem="cFc-Ih-Nir" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qrc-hT-axG"/>
+                            <constraint firstAttribute="trailing" secondItem="cFc-Ih-Nir" secondAttribute="trailing" constant="5" id="9sc-E8-1Op"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFc-Ih-Nir" secondAttribute="bottom" constant="5" id="DM0-qi-ohf"/>
+                            <constraint firstItem="cFc-Ih-Nir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="E6Q-ub-I1s"/>
+                            <constraint firstItem="cFc-Ih-Nir" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="qrc-hT-axG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trivago: Case Study" id="8ok-b5-H2y">

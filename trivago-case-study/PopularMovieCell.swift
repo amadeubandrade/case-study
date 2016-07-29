@@ -57,6 +57,7 @@ class PopularMovieCell: UITableViewCell {
         
     }
     
+    
     //MARK: - Aux
     
     func hideOutlets(banner banner: Bool, labels: Bool) {
