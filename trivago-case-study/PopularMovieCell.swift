@@ -14,9 +14,11 @@ class PopularMovieCell: UITableViewCell {
     
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var movieYear: UILabel!
+    @IBOutlet weak var movieImage: UIImage!
     
     
     //MARK: - Initialization
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,7 +28,7 @@ class PopularMovieCell: UITableViewCell {
     
     func configureCell(movie: Movie) {
         movieName.text = movie.name
-        movieYear.text = movie.year
+        movieYear.text = movie.year        
     }
     
 

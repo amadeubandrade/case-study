@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class InitialVC: UIViewController {
+    
+    //MARK: - Properties
+    
+    var pageNumber = 1
+    let pageLimit = 10
+    
     
     //MARK: - Outlets
     
@@ -19,7 +26,56 @@ class InitialVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        downloadPopularMovies(pageNumber) { (success) in
+            if success {
+                print("ok")
+            } else {
+                print("error")
+            }
+        }
+    }
+    
+    func downloadPopularMovies(pageNr: Int, completed: downloadCompleted) {
+        
+        let headers = [
+            "Content-Type": "application/json",
+            "trakt-api-version": "2",
+            "trakt-api-key": KEY_TRAKT
+        ]
+        
+        let parameters = [
+            "extended": "full,images",
+            "limit": "\(pageLimit)",
+            "page": "{\(pageNr)}"
+        ]
+        
+        let urlStr = "https://api.trakt.tv/movies/popular"
+        
+        if let url = NSURL(string: urlStr) {
+            Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: headers).responseJSON { (response: Response<AnyObject, NSError>) in
+                
+                if let result = response.result.value as? [[String: AnyObject]] {
+
+                    for movie in result {
+                        //title
+                        //year
+                        //imdb
+                        //youtube
+                        //homepage
+                        //overview
+                        //banner
+                        //poster
+                    }
+
+                    completed(success: true)
+
+                } else {
+                    print("no json")
+                }
+            }
+        
+        }
     }
     
 

@@ -32,55 +32,53 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-hL-mdH" userLabel="container" customClass="BorderedShadowedView" customModule="trivago_case_study" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="544" height="82"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-kY-qf5">
-                                                            <rect key="frame" x="20" y="18" width="514" height="46"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5El-pb-t0J" userLabel="movieInfoSV">
+                                                            <rect key="frame" x="20" y="17" width="479" height="49"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5El-pb-t0J" userLabel="movieInfoSV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="479" height="46"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-0p-n2a">
-                                                                            <rect key="frame" x="144" y="0.0" width="192" height="20"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2010)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-db-pbb">
-                                                                            <rect key="frame" x="216" y="25" width="48" height="21"/>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
-                                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SjQ-C0-y5L" userLabel="arrowSV">
-                                                                    <rect key="frame" x="489" y="0.0" width="25" height="46"/>
-                                                                    <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-cE-2qA">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="46"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="25" id="kRu-zN-Jeb"/>
-                                                                                <constraint firstAttribute="width" constant="25" id="yqE-kL-oYN"/>
-                                                                            </constraints>
-                                                                        </imageView>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-0p-n2a">
+                                                                    <rect key="frame" x="144" y="0.0" width="192" height="23"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2010)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-db-pbb">
+                                                                    <rect key="frame" x="216" y="28" width="48" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="Sag-9K-OAC"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </stackView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="DMO-cE-2qA">
+                                                            <rect key="frame" x="509" y="28" width="25" height="25"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="576-vZ-nVN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="499" height="82"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="0cN-kY-qf5" secondAttribute="trailing" constant="10" id="77c-6m-ZsQ"/>
-                                                        <constraint firstItem="0cN-kY-qf5" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" constant="20" id="Dac-9Z-3a6"/>
-                                                        <constraint firstAttribute="bottom" secondItem="0cN-kY-qf5" secondAttribute="bottom" constant="18" id="YVx-wp-5ws"/>
-                                                        <constraint firstItem="0cN-kY-qf5" firstAttribute="top" secondItem="ix8-hL-mdH" secondAttribute="top" constant="18" id="vpW-ke-9Ln"/>
+                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="576-vZ-nVN" secondAttribute="trailing" constant="10" id="0y4-h0-vBj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DMO-cE-2qA" secondAttribute="trailing" constant="10" id="547-6Q-7hR"/>
+                                                        <constraint firstItem="576-vZ-nVN" firstAttribute="top" secondItem="ix8-hL-mdH" secondAttribute="top" id="BdK-o4-gCe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5El-pb-t0J" secondAttribute="bottom" constant="16" id="FSr-3c-cgl"/>
+                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="I1Q-8l-PFt"/>
+                                                        <constraint firstItem="5El-pb-t0J" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" constant="20" id="MT5-HM-Qak"/>
+                                                        <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="5El-pb-t0J" secondAttribute="trailing" constant="10" id="OLl-DB-tHh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="576-vZ-nVN" secondAttribute="bottom" id="aFg-Bv-bSB"/>
+                                                        <constraint firstItem="576-vZ-nVN" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" id="cYy-DL-CRV"/>
+                                                        <constraint firstItem="5El-pb-t0J" firstAttribute="top" secondItem="ix8-hL-mdH" secondAttribute="top" constant="17" id="vTP-1U-vff"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="leading" secondItem="MEV-Rt-I9h" secondAttribute="leadingMargin" id="3pL-Nb-xPA"/>
-                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="top" secondItem="MEV-Rt-I9h" secondAttribute="topMargin" id="Mgy-1E-tsa"/>
-                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="bottom" secondItem="MEV-Rt-I9h" secondAttribute="bottomMargin" id="ZF5-i0-GUg"/>
-                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="trailing" secondItem="MEV-Rt-I9h" secondAttribute="trailingMargin" id="lf6-z2-Cne"/>
+                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="top" secondItem="MEV-Rt-I9h" secondAttribute="topMargin" id="2lm-rD-Iyi"/>
+                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="leading" secondItem="MEV-Rt-I9h" secondAttribute="leadingMargin" id="8vg-Ki-jlU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ix8-hL-mdH" secondAttribute="bottom" constant="3" id="DLj-Zn-oFp"/>
+                                                <constraint firstItem="ix8-hL-mdH" firstAttribute="trailing" secondItem="MEV-Rt-I9h" secondAttribute="trailingMargin" id="d33-SG-MRi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>

@@ -14,9 +14,12 @@ class Movie {
     
     private var _name: String!
     private var _year: String!
-    private var _overview: String!
-    private var _imageUrl: String?
-    private var _fanArtUrl: String?
+    private var _overview: String?
+    private var _posterUrl: String?
+    private var _bannerUrl: String?
+    private var _imdbUrl: String?
+    private var _youtubeUrl: String?
+    private var _homepageUrl: String?
     
     
     //MARK: - Getters
@@ -29,31 +32,55 @@ class Movie {
         return _year
     }
     
-    var overview: String {
+    var overview: String? {
         return _overview
     }
     
-    var imageUrl: String? {
-        return _imageUrl
+    var posterUrl: String? {
+        return _posterUrl
     }
     
-    var fanArtUrl: String? {
-        return _fanArtUrl
+    var bannerUrl: String? {
+        return _bannerUrl
+    }
+    
+    var imdbUrl: String? {
+        return _imdbUrl
+    }
+    
+    var youtubeUrl: String? {
+        return _youtubeUrl
+    }
+    
+    var homepageUrl: String? {
+        return _homepageUrl
     }
     
     
     //MARK: - Initializer
     
-    init(name: String, year: String, overview: String, imageUrl: String? = nil, fanArtUrl: String? = nil) {
+    init(name: String, year: String, overview: String? = nil, posterUrl: String? = nil, bannerUrl: String? = nil, imdbUrl: String? = nil, youtubeUrl: String? = nil, homepageUrl: String? = nil) {
         _name = name
         _year = year
-        _overview = overview
-        if let image = imageUrl {
-            _imageUrl = image
+        if let overviewTxt = overview {
+            _overview = overviewTxt
         }
-        if let fanArt = fanArtUrl {
-            _fanArtUrl = fanArt
+        if let poster = posterUrl {
+            _posterUrl = poster
         }
+        if let banner = bannerUrl {
+            _bannerUrl = banner
+        }
+        if let imdb = imdbUrl {
+            _imdbUrl = imdb
+        }
+        if let youtube = youtubeUrl {
+            _youtubeUrl = youtube
+        }
+        if let homepage = homepageUrl {
+            _homepageUrl = homepage
+        }
+        
     }
     
 }

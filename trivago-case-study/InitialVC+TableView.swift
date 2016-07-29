@@ -20,7 +20,7 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PopularMovieCell") as? PopularMovieCell {
-            let movie = Movie(name: "Batman: The Dark Knight", year: "(2010)", overview: "")
+            let movie = Movie(name: "Test... long movieeeeeeee nameeeeeeeeeeeeeee!", year: "(2010)")
             cell.configureCell(movie)
             return cell
         }
