@@ -24,10 +24,9 @@ class PopularMovieCell: UITableViewCell {
     
     //MARK: - Cell Configuration
     
-    func configureCell(name: String, year: String) {
-        //TODO: - Need to change this when creating movie's class
-        movieName.text = name
-        movieYear.text = year
+    func configureCell(movie: Movie) {
+        movieName.text = movie.name
+        movieYear.text = movie.year
     }
     
 

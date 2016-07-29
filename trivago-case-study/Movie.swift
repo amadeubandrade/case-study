@@ -44,7 +44,7 @@ class Movie {
     
     //MARK: - Initializer
     
-    init(name: String, year: String, overview: String, imageUrl: String?, fanArtUrl: String?) {
+    init(name: String, year: String, overview: String, imageUrl: String? = nil, fanArtUrl: String? = nil) {
         _name = name
         _year = year
         _overview = overview
