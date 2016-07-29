@@ -15,12 +15,13 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return popularMovies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PopularMovieCell") as? PopularMovieCell {
-            let movie = Movie(name: "Test... long movieeeeeeee nameeeeeeeeeeeeeee!", year: "(2010)")
+            let movie = popularMovies[indexPath.row]
+            cell.bannerRequest?.cancel()
             cell.configureCell(movie)
             return cell
         }

@@ -15,6 +15,7 @@ class InitialVC: UIViewController {
     
     var pageNumber = 1
     let pageLimit = 10
+    var popularMovies = [Movie]()
     
     
     //MARK: - Outlets
@@ -30,6 +31,7 @@ class InitialVC: UIViewController {
         downloadPopularMovies(pageNumber) { (success) in
             if success {
                 print("ok")
+                self.tableView.reloadData()
             } else {
                 print("error")
             }
@@ -57,15 +59,51 @@ class InitialVC: UIViewController {
                 
                 if let result = response.result.value as? [[String: AnyObject]] {
 
-                    for movie in result {
-                        //title
-                        //year
-                        //imdb
-                        //youtube
-                        //homepage
-                        //overview
-                        //banner
-                        //poster
+                    for movieEntry in result {
+                        
+                        var movieTitle: String!
+                        var movieYear: String!
+                        var imdbURL: String?
+                        var youtubeURL: String?
+                        var homepageURL: String?
+                        var overview: String?
+                        var bannerURL: String?
+                        var posterURL: String?
+                        
+                        if let title = movieEntry["title"] as? String, let year = movieEntry["year"] as? Int {
+                            movieTitle = title
+                            movieYear = "\(year)"
+                            if let ids = movieEntry["ids"] as? [String: AnyObject] {
+                                if let imdb = ids["imdb"] as? String {
+                                    imdbURL = "http://www.imdb.com/title/\(imdb)/"
+                                }
+                            }
+                            if let youtube = movieEntry["trailer"] as? String {
+                                youtubeURL = youtube
+                            }
+                            
+                            if let homepage = movieEntry["homepage"] as? String {
+                                homepageURL = homepage
+                            }
+                            if let overviewTxt = movieEntry["overview"] as? String {
+                                overview = overviewTxt
+                            }
+                            if let images = movieEntry["images"] as? [String: AnyObject] {
+                                if let poster = images["poster"] as? [String: AnyObject] {
+                                    if let posterStr = poster["thumb"] as? String {
+                                        posterURL = posterStr
+                                    }
+                                }
+                                if let banner = images["banner"] as? [String: AnyObject] {
+                                    if let bannerStr = banner["full"] as? String {
+                                        bannerURL = bannerStr
+                                    }
+                                }
+                            }
+                            let movie = Movie(name: movieTitle, year: movieYear, overview: overview, posterUrl: posterURL, bannerUrl: bannerURL, imdbUrl: imdbURL, youtubeUrl: youtubeURL, homepageUrl: homepageURL)
+                            self.popularMovies.append(movie)
+                        }
+
                     }
 
                     completed(success: true)
