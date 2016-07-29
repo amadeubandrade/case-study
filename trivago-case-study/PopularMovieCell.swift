@@ -13,6 +13,7 @@ class PopularMovieCell: UITableViewCell {
     
     //MARK: - Properties
     var bannerRequest: Request?
+    let acceptableContentType = ["image/jpeg", "image/gif", "image/png"]
 
     //MARK: - Outlets
     
@@ -36,30 +37,35 @@ class PopularMovieCell: UITableViewCell {
     
     func configureCell(movie: Movie) {
         if let banner = movie.bannerUrl {
-            movieImage.hidden = false
-            movieName.hidden = true
-            movieYear.hidden = true
+            hideOutlets(banner: false, labels: true)
             movieImage.image = nil
-            bannerRequest = Alamofire.request(.GET, banner).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+            bannerRequest = Alamofire.request(.GET, banner).validate(contentType: acceptableContentType).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                 if error != nil {
-                    print(error)
+                    self.hideOutlets(banner: true, labels: false)
+                    self.movieName.text = movie.name
+                    self.movieYear.text = "\(movie.year)"
                 } else if let imageData = data {
                     let img = UIImage(data: imageData)
                     self.movieImage.image = img
-                } else {
-                    print("Unknown error")
                 }
             })
-            
         } else {
-            movieImage.hidden = true
-            movieName.hidden = false
-            movieYear.hidden = false
+            hideOutlets(banner: true, labels: false)
             movieName.text = movie.name
-            movieYear.text = "\(movie.year)"
+            movieYear.text = "(\(movie.year))"
         }
         
     }
+    
+    //MARK: - Aux
+    
+    func hideOutlets(banner banner: Bool, labels: Bool) {
+        movieImage.hidden = banner
+        movieName.hidden = labels
+        movieYear.hidden = labels
+    }
+    
+    
     
 
 }
