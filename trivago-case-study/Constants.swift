@@ -8,5 +8,8 @@
 
 import Foundation
 
-//MARK: - KEYs
+//MARK: - Completion Handler
+typealias downloadCompleted = (succes: Bool) -> ()
+
+//MARK: - Keys
 let KEY_TRAKT = "ad005b8c117cdeee58a1bdb7089ea31386cd489b21e14b19818c91511f12a086"

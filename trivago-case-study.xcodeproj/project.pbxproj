@@ -17,6 +17,7 @@
 		E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */; };
 		E01FA5E11D4A8E7A00408C01 /* InitialVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5E01D4A8E7A00408C01 /* InitialVC+TableView.swift */; };
 		E01FA5E41D4A8F4600408C01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5E31D4A8F4600408C01 /* Constants.swift */; };
+		E01FA5E61D4B916600408C01 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FA5E51D4B916600408C01 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularMovieCell.swift; sourceTree = "<group>"; };
 		E01FA5E01D4A8E7A00408C01 /* InitialVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InitialVC+TableView.swift"; sourceTree = "<group>"; };
 		E01FA5E31D4A8F4600408C01 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E01FA5E51D4B916600408C01 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */,
+				E01FA5E51D4B916600408C01 /* Movie.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01FA5E61D4B916600408C01 /* Movie.swift in Sources */,
 				E01FA5CA1D4A52DA00408C01 /* InitialVC.swift in Sources */,
 				E01FA5C81D4A52DA00408C01 /* AppDelegate.swift in Sources */,
 				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
