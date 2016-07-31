@@ -33,6 +33,7 @@ class SearchMovieCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    
     //IBActions
     @IBAction func onLinkBtnPressed(sender: UIButton) {
         //0 - homepage

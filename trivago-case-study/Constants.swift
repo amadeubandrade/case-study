@@ -19,3 +19,4 @@ let URL_BASE = "https://api.trakt.tv/"
 
 //MARK: - Segues
 let SEGUE_SEARCH_VC = "showSearchVC"
+let SEGUE_WEB_VC = "showWebVC"

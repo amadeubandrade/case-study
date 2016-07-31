@@ -250,11 +250,30 @@
                     <connections>
                         <outlet property="searchBar" destination="xah-d7-fng" id="xfm-6T-T8p"/>
                         <outlet property="tableView" destination="8XS-2a-qlG" id="O9n-Kk-Mhd"/>
+                        <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="NsV-Fa-Alg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGk-It-1xJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1699" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GGY-s1-rgs">
+            <objects>
+                <viewController id="ndo-HQ-WFg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LT3-wK-bqk"/>
+                        <viewControllerLayoutGuide type="bottom" id="sCt-Rv-q1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r8S-Lk-eBv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ap-Vy-fTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="1031"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kyh-rF-oxZ">
