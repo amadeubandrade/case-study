@@ -10,13 +10,17 @@ import UIKit
 
 extension InitialVC: UITableViewDelegate, UITableViewDataSource {
 
+    //MARK: - Table View Methods
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return popularMovies.count
     }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PopularMovieCell") as? PopularMovieCell {
