@@ -16,7 +16,9 @@ class SearchMovieCell: UITableViewCell {
     var posterRequest: Request?
     let acceptableContentType = ["image/jpeg", "image/gif", "image/png"]
     var delegate:MyCustomCellDelegator!
-    var url: String?
+    var imdbUrl: String?
+    var youtubeUrl: String?
+    var homepageUrl: String?
 
     
     //MARK: - IBOutlets
@@ -40,8 +42,12 @@ class SearchMovieCell: UITableViewCell {
     
     @IBAction func onLinkBtnPressed(sender: UIButton) {
         if self.delegate != nil {
-            if let urlStr = url {
-                self.delegate.callSegueFromButtonCell(url: urlStr)
+            if sender.tag == 0, let url = homepageUrl {
+                self.delegate.callSegueFromButtonCell(url: url)
+            } else if sender.tag == 1 , let url = youtubeUrl {
+                self.delegate.callSegueFromButtonCell(url: url)
+            } else if sender.tag == 2, let url = imdbUrl {
+                self.delegate.callSegueFromButtonCell(url: url)
             }
         }
     }
@@ -63,7 +69,7 @@ class SearchMovieCell: UITableViewCell {
         if homepage != nil {
             homepageBtn.alpha = 1.0
             homepageBtn.enabled = true
-            url = homepage
+            homepageUrl = homepage
         } else {
             homepageBtn.alpha = 0.4
             homepageBtn.enabled = false
@@ -72,7 +78,7 @@ class SearchMovieCell: UITableViewCell {
         if youtube != nil {
             youtubeBtn.alpha = 1.0
             youtubeBtn.enabled = true
-            url = youtube
+            youtubeUrl = youtube
         } else {
             youtubeBtn.alpha = 0.4
             youtubeBtn.enabled = false
@@ -81,7 +87,7 @@ class SearchMovieCell: UITableViewCell {
         if imdb != nil {
             imdbBtn.alpha = 1.0
             imdbBtn.enabled = true
-            url = imdb
+            imdbUrl = imdb
         } else {
             imdbBtn.alpha = 0.4
             imdbBtn.enabled = false

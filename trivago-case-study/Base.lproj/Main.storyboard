@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="981" y="295"/>
         </scene>
-        <!--SearchVC-->
+        <!-- -->
         <scene sceneID="Z5v-q5-kbS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ip2-2W-cjY" customClass="SearchVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " automaticallyAdjustsScrollViewInsets="NO" id="Ip2-2W-cjY" customClass="SearchVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k6F-RG-iPk"/>
                         <viewControllerLayoutGuide type="bottom" id="hkD-4c-eTM"/>
@@ -260,7 +260,7 @@
         <!--WebVC-->
         <scene sceneID="GGY-s1-rgs">
             <objects>
-                <viewController id="ndo-HQ-WFg" customClass="WebVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ndo-HQ-WFg" customClass="WebVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LT3-wK-bqk"/>
                         <viewControllerLayoutGuide type="bottom" id="sCt-Rv-q1W"/>
