@@ -41,6 +41,8 @@ class InitialVC: UIViewController {
     
     func downloadPopularMovies(pageNr: Int, completed: downloadCompleted) {
         
+        let urlStr = URL_BASE + "movies/popular"
+
         let headers = [
             "Content-Type": "application/json",
             "trakt-api-version": "2",
@@ -53,7 +55,6 @@ class InitialVC: UIViewController {
             "page": pageNr
         ]
         
-        let urlStr = "https://api.trakt.tv/movies/popular"
         
         if let url = NSURL(string: urlStr) {
             Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: headers).responseJSON { (response: Response<AnyObject, NSError>) in
