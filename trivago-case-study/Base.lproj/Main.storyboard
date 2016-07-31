@@ -231,8 +231,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Ip2-2W-cjY" id="EFB-70-JBx"/>
-                                    <outlet property="delegate" destination="Ip2-2W-cjY" id="a5j-px-KJg"/>
+                                    <outlet property="dataSource" destination="Ip2-2W-cjY" id="QxC-bH-Kgt"/>
+                                    <outlet property="delegate" destination="Ip2-2W-cjY" id="GAR-RC-Rmn"/>
                                 </connections>
                             </tableView>
                         </subviews>

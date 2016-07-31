@@ -13,6 +13,10 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Table View Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if popularMovies.isEmpty {
+            TableViewHelper.EmptyMessage("No results to display.", tableView: tableView)
+            return 0
+        }
         return 1
     }
     
@@ -27,12 +31,12 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
             let movie = popularMovies[indexPath.row]
             
             if indexPath.row == popularMovies.count - 1 {
-                pageNumber += 1
-                downloadPopularMovies(pageNumber, completed: { (success) in
+                actualPageNumber += 1
+                downloadPopularMovies(actualPageNumber, completed: { (success) in
                     if success {
                         tableView.reloadData()
                     } else {
-                        let alert = UIAlertController(title: "Problem found!", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
+                        let alert = UIAlertController(title: "Problem found", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
                         let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
                         alert.addAction(action)
                         self.presentViewController(alert, animated: true, completion: nil)

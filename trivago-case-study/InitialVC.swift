@@ -13,8 +13,7 @@ class InitialVC: UIViewController {
     
     //MARK: - Properties
     
-    var pageNumber = 1
-    let pageLimit = 10
+    var actualPageNumber = 1
     var popularMovies = [Movie]()
     
     
@@ -28,7 +27,7 @@ class InitialVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        downloadPopularMovies(pageNumber) { (success) in
+        downloadPopularMovies(actualPageNumber) { (success) in
             if success {
                 self.tableView.reloadData()
             } else {
@@ -53,22 +52,15 @@ class InitialVC: UIViewController {
     func downloadPopularMovies(pageNr: Int, completed: downloadCompleted) {
         
         let urlStr = URL_BASE + "movies/popular"
-
-        let headers = [
-            "Content-Type": "application/json",
-            "trakt-api-version": "2",
-            "trakt-api-key": KEY_TRAKT
-        ]
         
         let parameters : [String: AnyObject] = [
             "extended": "full,images",
-            "limit": pageLimit,
+            "limit": REQUEST_PAGE_LIMIT,
             "page": pageNr
         ]
         
-        
         if let url = NSURL(string: urlStr) {
-            Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: headers).responseJSON { (response: Response<AnyObject, NSError>) in
+            Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: REQUEST_HEADER).responseJSON { (response: Response<AnyObject, NSError>) in
 
                 if let result = response.result.value as? [[String: AnyObject]] {
 
@@ -127,7 +119,7 @@ class InitialVC: UIViewController {
             }
         
         } else {
-            let alert = UIAlertController(title: "Problem found!", message: "There was a problem with the Url. Please try again later.", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Problem found", message: "There was a problem with the Url. Please try again later.", preferredStyle: .Alert)
             let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
