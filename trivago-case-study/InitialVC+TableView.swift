@@ -44,7 +44,7 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
             cell.configureCell(movie)
             return cell
         }
-        return UITableViewCell()
+        return PopularMovieCell()
     }
     
 }

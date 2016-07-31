@@ -23,7 +23,12 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if let cell = tableView.dequeueReusableCellWithIdentifier("SearchMovieCell") as? SearchMovieCell {
+            let movie = filteredMovies[indexPath.row]
+            cell.configureCell(movie)
+            return cell
+        }
+        return SearchMovieCell()
     }
     
 

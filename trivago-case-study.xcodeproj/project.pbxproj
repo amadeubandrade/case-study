@@ -21,6 +21,7 @@
 		E0DC867F1D4DFC9B00C72E2E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC867E1D4DFC9B00C72E2E /* SearchVC.swift */; };
 		E0DC86811D4E067E00C72E2E /* SearchVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86801D4E067E00C72E2E /* SearchVC+TableView.swift */; };
 		E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */; };
+		E0DC86851D4E0B5000C72E2E /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E0DC867E1D4DFC9B00C72E2E /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		E0DC86801D4E067E00C72E2E /* SearchVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+TableView.swift"; sourceTree = "<group>"; };
 		E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+SearchBar.swift"; sourceTree = "<group>"; };
+		E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */,
 				E01FA5E51D4B916600408C01 /* Movie.swift */,
+				E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DC86851D4E0B5000C72E2E /* SearchMovieCell.swift in Sources */,
 				E0DC867F1D4DFC9B00C72E2E /* SearchVC.swift in Sources */,
 				E01FA5E61D4B916600408C01 /* Movie.swift in Sources */,
 				E01FA5CA1D4A52DA00408C01 /* InitialVC.swift in Sources */,
