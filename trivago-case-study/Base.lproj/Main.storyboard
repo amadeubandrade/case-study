@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="981" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--SearchVC-->
         <scene sceneID="Z5v-q5-kbS">
             <objects>
-                <viewController id="Ip2-2W-cjY" sceneMemberID="viewController">
+                <viewController id="Ip2-2W-cjY" customClass="SearchVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k6F-RG-iPk"/>
                         <viewControllerLayoutGuide type="bottom" id="hkD-4c-eTM"/>
