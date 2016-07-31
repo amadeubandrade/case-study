@@ -23,6 +23,7 @@
 		E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */; };
 		E0DC86851D4E0B5000C72E2E /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */; };
 		E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86861D4E18B800C72E2E /* WebVC.swift */; };
+		E0DC86891D4E384B00C72E2E /* MyCustomCellDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+SearchBar.swift"; sourceTree = "<group>"; };
 		E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
 		E0DC86861D4E18B800C72E2E /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCellDelegator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,6 @@
 				E01FA5DB1D4A713100408C01 /* Controller */,
 				E01FA5E21D4A8F2700408C01 /* Support Files */,
 				E01FA5CE1D4A52DA00408C01 /* Assets.xcassets */,
-				E01FA5D31D4A52DA00408C01 /* Info.plist */,
 			);
 			path = "trivago-case-study";
 			sourceTree = "<group>";
@@ -111,9 +112,7 @@
 		E01FA5D91D4A712100408C01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */,
 				E01FA5E51D4B916600408C01 /* Movie.swift */,
-				E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -124,6 +123,8 @@
 				E01FA5CB1D4A52DA00408C01 /* Main.storyboard */,
 				E01FA5D01D4A52DA00408C01 /* LaunchScreen.storyboard */,
 				E01FA5DC1D4A845400408C01 /* BorderedShadowedView.swift */,
+				E01FA5DE1D4A884300408C01 /* PopularMovieCell.swift */,
+				E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -146,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				E01FA5E31D4A8F4600408C01 /* Constants.swift */,
+				E01FA5D31D4A52DA00408C01 /* Info.plist */,
+				E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E01FA5CA1D4A52DA00408C01 /* InitialVC.swift in Sources */,
 				E01FA5C81D4A52DA00408C01 /* AppDelegate.swift in Sources */,
 				E0DC86811D4E067E00C72E2E /* SearchVC+TableView.swift in Sources */,
+				E0DC86891D4E384B00C72E2E /* MyCustomCellDelegator.swift in Sources */,
 				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
 				E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */,
 				E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */,

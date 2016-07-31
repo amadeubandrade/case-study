@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SearchVC: UITableViewDelegate, UITableViewDataSource {
+extension SearchVC: UITableViewDelegate, UITableViewDataSource, MyCustomCellDelegator {
 
     //MARK: - Table View Methods
     
@@ -26,9 +26,30 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCellWithIdentifier("SearchMovieCell") as? SearchMovieCell {
             let movie = filteredMovies[indexPath.row]
             cell.configureCell(movie)
+            cell.delegate = self
             return cell
         }
         return SearchMovieCell()
+    }
+    
+    
+    //MARK: - MyCustomCellDelegator Methods
+    
+    func callSegueFromButtonCell(url url: String) {
+        performSegueWithIdentifier(SEGUE_WEB_VC, sender: url)
+    }
+    
+    
+    //MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SEGUE_WEB_VC {
+            if let webVC = segue.destinationViewController as? WebVC {
+                if let url = sender as? String {
+                    webVC.urlStr = url
+                }
+            }
+        }
     }
     
 

@@ -15,8 +15,10 @@ class SearchMovieCell: UITableViewCell {
     
     var posterRequest: Request?
     let acceptableContentType = ["image/jpeg", "image/gif", "image/png"]
+    var delegate:MyCustomCellDelegator!
+    var url: String?
 
-
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var movieImage: UIImageView!
@@ -34,28 +36,56 @@ class SearchMovieCell: UITableViewCell {
     }
     
     
-    //IBActions
+    //MARK: - IBActions
+    
     @IBAction func onLinkBtnPressed(sender: UIButton) {
-        //0 - homepage
-        //1 - youtube
-        //2 - imdb
+        if self.delegate != nil {
+            if let urlStr = url {
+                self.delegate.callSegueFromButtonCell(url: urlStr)
+            }
+        }
     }
     
     
     //MARK: - Cell Configuration
     
     func configureCell(movie: Movie) {
-        //
-       // movieImage.image =
+        // movieImage.image =
         movieTitleAndYear.text = "\(movie.name) (\(movie.year))"
         movieOverview.text = movie.overview
-        
+        configureLinkBtns(movie.homepageUrl, youtube: movie.youtubeUrl, imdb: movie.imdbUrl)
     }
 
     
-    //MARK: - Auxiliary Functions
-    func configureLinks(homepage: String, youtube: String, imdb: String) {
-        //
+    //MARK: Configure Link Buttons
+    
+    func configureLinkBtns(homepage: String? = nil, youtube: String? = nil, imdb: String? = nil) {
+        if homepage != nil {
+            homepageBtn.alpha = 1.0
+            homepageBtn.enabled = true
+            url = homepage
+        } else {
+            homepageBtn.alpha = 0.4
+            homepageBtn.enabled = false
+        }
+        
+        if youtube != nil {
+            youtubeBtn.alpha = 1.0
+            youtubeBtn.enabled = true
+            url = youtube
+        } else {
+            youtubeBtn.alpha = 0.4
+            youtubeBtn.enabled = false
+        }
+        
+        if imdb != nil {
+            imdbBtn.alpha = 1.0
+            imdbBtn.enabled = true
+            url = imdb
+        } else {
+            imdbBtn.alpha = 0.4
+            imdbBtn.enabled = false
+        }
     }
 
 }

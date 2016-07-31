@@ -178,21 +178,21 @@
                                                             </constraints>
                                                             <state key="normal" image="homepage"/>
                                                             <connections>
-                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="n77-X5-efP"/>
+                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="GUq-rg-Af8"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWe-nN-AQk">
                                                             <rect key="frame" x="38" y="0.0" width="30" height="30"/>
                                                             <state key="normal" image="YouTube"/>
                                                             <connections>
-                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="5kj-v5-rzl"/>
+                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="UaG-zG-bzi"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yY-4d-ORv">
                                                             <rect key="frame" x="76" y="0.0" width="30" height="30"/>
                                                             <state key="normal" image="IMDb"/>
                                                             <connections>
-                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="yYf-N4-Cui"/>
+                                                                <action selector="onLinkBtnPressed:" destination="CjL-Sl-eVy" eventType="touchUpInside" id="A6q-hI-j2n"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -250,7 +250,7 @@
                     <connections>
                         <outlet property="searchBar" destination="xah-d7-fng" id="xfm-6T-T8p"/>
                         <outlet property="tableView" destination="8XS-2a-qlG" id="O9n-Kk-Mhd"/>
-                        <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="NsV-Fa-Alg"/>
+                        <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="uLc-i0-dl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGk-It-1xJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ap-Vy-fTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="1031"/>
+            <point key="canvasLocation" x="1699" y="991"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kyh-rF-oxZ">
