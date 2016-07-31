@@ -21,6 +21,18 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PopularMovieCell") as? PopularMovieCell {
             let movie = popularMovies[indexPath.row]
+            
+            if indexPath.row == popularMovies.count - 1 {
+                pageNumber += 1
+                downloadPopularMovies(pageNumber, completed: { (success) in
+                    if success {
+                        tableView.reloadData()
+                    } else {
+                        print("error")
+                    }
+                })
+            }
+            
             cell.bannerRequest?.cancel()
             cell.configureCell(movie)
             return cell

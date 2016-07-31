@@ -17,7 +17,6 @@ class InitialVC: UIViewController {
     let pageLimit = 10
     var popularMovies = [Movie]()
     
-    
     //MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,13 +29,15 @@ class InitialVC: UIViewController {
 
         downloadPopularMovies(pageNumber) { (success) in
             if success {
-                print("ok")
                 self.tableView.reloadData()
             } else {
                 print("error")
             }
         }
     }
+    
+    
+    //MARK: - Auxiliary Functions
     
     func downloadPopularMovies(pageNr: Int, completed: downloadCompleted) {
         
@@ -46,10 +47,10 @@ class InitialVC: UIViewController {
             "trakt-api-key": KEY_TRAKT
         ]
         
-        let parameters = [
+        let parameters : [String: AnyObject] = [
             "extended": "full,images",
-            "limit": "\(pageLimit)",
-            "page": "{\(pageNr)}"
+            "limit": pageLimit,
+            "page": pageNr
         ]
         
         let urlStr = "https://api.trakt.tv/movies/popular"
@@ -109,7 +110,7 @@ class InitialVC: UIViewController {
                     completed(success: true)
 
                 } else {
-                    print("no json")
+                    completed(success: false)
                 }
             }
         
