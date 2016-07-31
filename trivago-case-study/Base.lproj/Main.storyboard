@@ -106,15 +106,37 @@
                     <navigationItem key="navigationItem" title="Trivago: Case Study" id="8ok-b5-H2y">
                         <barButtonItem key="rightBarButtonItem" image="search" id="HWO-8f-bit">
                             <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <connections>
+                                <action selector="onSearchBtnPressed:" destination="BYZ-38-t0r" id="Omr-rS-rqz"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cFc-Ih-Nir" id="YYz-17-Odb"/>
+                        <segue destination="Ip2-2W-cjY" kind="show" identifier="showSearchVC" id="ITJ-Xl-bbp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981" y="295"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Z5v-q5-kbS">
+            <objects>
+                <viewController id="Ip2-2W-cjY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k6F-RG-iPk"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkD-4c-eTM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="64d-N9-OPO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGk-It-1xJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kyh-rF-oxZ">

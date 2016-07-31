@@ -77,7 +77,5 @@ class PopularMovieCell: UITableViewCell {
         movieYear.hidden = labels
     }
     
-    
-    
 
 }

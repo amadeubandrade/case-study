@@ -16,3 +16,6 @@ let KEY_TRAKT = "ad005b8c117cdeee58a1bdb7089ea31386cd489b21e14b19818c91511f12a08
 
 //MARK: - URLs
 let URL_BASE = "https://api.trakt.tv/"
+
+//MARK: - Segues
+let SEGUE_SEARCH_VC = "showSearchVC"

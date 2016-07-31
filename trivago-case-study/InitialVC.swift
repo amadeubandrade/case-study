@@ -17,6 +17,7 @@ class InitialVC: UIViewController {
     let pageLimit = 10
     var popularMovies = [Movie]()
     
+    
     //MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -37,6 +38,13 @@ class InitialVC: UIViewController {
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    
+    //MARK: - IBActions
+    
+    @IBAction func onSearchBtnPressed(sender: UIBarButtonItem) {
+        performSegueWithIdentifier(SEGUE_SEARCH_VC, sender: nil)
     }
     
     
