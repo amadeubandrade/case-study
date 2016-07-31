@@ -31,7 +31,10 @@ class InitialVC: UIViewController {
             if success {
                 self.tableView.reloadData()
             } else {
-                print("error")
+                let alert = UIAlertController(title: "Problem found!", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
@@ -58,7 +61,7 @@ class InitialVC: UIViewController {
         
         if let url = NSURL(string: urlStr) {
             Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: headers).responseJSON { (response: Response<AnyObject, NSError>) in
-                
+
                 if let result = response.result.value as? [[String: AnyObject]] {
 
                     for movieEntry in result {
@@ -115,11 +118,14 @@ class InitialVC: UIViewController {
                 }
             }
         
+        } else {
+            let alert = UIAlertController(title: "Problem found!", message: "There was a problem with the Url. Please try again later.", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
-
-
 
 }
 
