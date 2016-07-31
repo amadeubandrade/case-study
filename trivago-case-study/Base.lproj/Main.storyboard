@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1699" y="295"/>
         </scene>
-        <!--View Controller-->
+        <!--WebVC-->
         <scene sceneID="GGY-s1-rgs">
             <objects>
-                <viewController id="ndo-HQ-WFg" sceneMemberID="viewController">
+                <viewController id="ndo-HQ-WFg" customClass="WebVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LT3-wK-bqk"/>
                         <viewControllerLayoutGuide type="bottom" id="sCt-Rv-q1W"/>

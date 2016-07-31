@@ -22,6 +22,7 @@
 		E0DC86811D4E067E00C72E2E /* SearchVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86801D4E067E00C72E2E /* SearchVC+TableView.swift */; };
 		E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */; };
 		E0DC86851D4E0B5000C72E2E /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */; };
+		E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86861D4E18B800C72E2E /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E0DC86801D4E067E00C72E2E /* SearchVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+TableView.swift"; sourceTree = "<group>"; };
 		E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+SearchBar.swift"; sourceTree = "<group>"; };
 		E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
+		E0DC86861D4E18B800C72E2E /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				E0DC867E1D4DFC9B00C72E2E /* SearchVC.swift */,
 				E0DC86801D4E067E00C72E2E /* SearchVC+TableView.swift */,
 				E0DC86821D4E06D400C72E2E /* SearchVC+SearchBar.swift */,
+				E0DC86861D4E18B800C72E2E /* WebVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
 				E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */,
 				E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */,
+				E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */,
 				E01FA5E11D4A8E7A00408C01 /* InitialVC+TableView.swift in Sources */,
 				E01FA5E41D4A8F4600408C01 /* Constants.swift in Sources */,
 			);
