@@ -19,11 +19,11 @@ class SearchVC: UIViewController, UISearchBarDelegate, MyCustomCellDelegator {
     var actualPageNumber = 1
     var textToSearch: String?
     
-    
     //MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var spinLoadingMovies: UIActivityIndicatorView!
 
     
     //MARK: - View Life Cycle
@@ -32,6 +32,7 @@ class SearchVC: UIViewController, UISearchBarDelegate, MyCustomCellDelegator {
         super.viewDidLoad()
         searchBar.delegate = self
         searchBar.returnKeyType = .Done
+        spinLoadingMovies.hidesWhenStopped = true
     }
     
     

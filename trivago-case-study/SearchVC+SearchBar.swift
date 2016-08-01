@@ -20,10 +20,12 @@ extension SearchVC {
             tableView.reloadData()
         } else {
             resetRequests()
+            spinLoadingMovies.startAnimating()
             let text = searchText.lowercaseString.stringByFoldingWithOptions(.DiacriticInsensitiveSearch, locale: NSLocale.currentLocale())
             textToSearch = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
             downloadSearchedMovies(textToSearch!, pageNumber: actualPageNumber, completed: { (success) in
-                    self.tableView.reloadData()
+                self.spinLoadingMovies.stopAnimating()
+                self.tableView.reloadData()
             })
         }
     }

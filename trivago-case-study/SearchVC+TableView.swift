@@ -32,8 +32,10 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
                 let movie = filteredMovies[indexPath.row]
                 
                 if indexPath.row == filteredMovies.count - 1 {
+                    spinLoadingMovies.startAnimating()
                     actualPageNumber += 1
                     downloadSearchedMovies(textToSearch!, pageNumber: actualPageNumber, completed: { (success) in
+                        self.spinLoadingMovies.stopAnimating()
                         self.tableView.reloadData()
                     })
                 }

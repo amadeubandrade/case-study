@@ -15,8 +15,8 @@ class WebVC: UIViewController {
     
     var webView: WKWebView!
     var urlStr: String!
-    var spinIndicator = SpinIndicator()
 
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var container: UIView!

@@ -28,12 +28,14 @@ class SearchMovieCell: UITableViewCell {
     @IBOutlet weak var homepageBtn: UIButton!
     @IBOutlet weak var youtubeBtn: UIButton!
     @IBOutlet weak var imdbBtn: UIButton!
+    @IBOutlet weak var spinLoadingImage: UIActivityIndicatorView!
 
     
     //MARK: - Initialization
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        spinLoadingImage.hidesWhenStopped = true
     }
     
     override func drawRect(rect: CGRect) {
@@ -60,22 +62,28 @@ class SearchMovieCell: UITableViewCell {
     
     func configureCell(movie: Movie) {
         
+        movieImage.image = nil
+        spinLoadingImage.startAnimating()
         if let posterUrl = movie.posterUrl {
-            movieImage.image = nil
-            
             if let cachedImage = CacheService.cache.retrieveFromCache(posterUrl) {
                 movieImage.image = cachedImage
+                spinLoadingImage.stopAnimating()
             } else {
                 posterRequest = Alamofire.request(.GET, posterUrl).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                     if error != nil {
                         self.movieImage.image = UIImage(named: "noMovie")
+                        self.spinLoadingImage.stopAnimating()
                     } else if let imgData = data {
                         let img = UIImage(data: imgData)!
                         self.movieImage.image = img
+                        self.spinLoadingImage.stopAnimating()
                         CacheService.cache.addToCache(img, key: posterUrl)
                     }
                 })
             }
+        } else {
+            movieImage.image = UIImage(named: "noMovie")
+            spinLoadingImage.stopAnimating()
         }
         
         movieTitleAndYear.text = "\(movie.name) (\(movie.year))"

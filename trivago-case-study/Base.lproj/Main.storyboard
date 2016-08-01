@@ -307,12 +307,17 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-U8-MDK">
+                                                    <rect key="frame" x="58" y="116" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bt2-l6-MmK" firstAttribute="top" secondItem="I8y-6n-bVc" secondAttribute="bottom" constant="8" id="63J-1r-l71"/>
                                                 <constraint firstItem="bt2-l6-MmK" firstAttribute="leading" secondItem="ta1-VY-Iy8" secondAttribute="leadingMargin" id="Fkm-P2-g7k"/>
                                                 <constraint firstItem="6sA-lF-96T" firstAttribute="top" secondItem="bt2-l6-MmK" secondAttribute="bottom" constant="8" id="Gdp-qC-RUz"/>
+                                                <constraint firstItem="1ey-U8-MDK" firstAttribute="centerY" secondItem="bt2-l6-MmK" secondAttribute="centerY" id="Mab-eV-xpO"/>
                                                 <constraint firstItem="6sA-lF-96T" firstAttribute="centerX" secondItem="bt2-l6-MmK" secondAttribute="centerX" id="Rgf-Jy-sxU"/>
+                                                <constraint firstItem="1ey-U8-MDK" firstAttribute="centerX" secondItem="bt2-l6-MmK" secondAttribute="centerX" id="dR1-2I-4Fb"/>
                                                 <constraint firstItem="HB1-iW-dSx" firstAttribute="trailing" secondItem="ta1-VY-Iy8" secondAttribute="trailingMargin" id="h3p-tW-uMd"/>
                                                 <constraint firstItem="I8y-6n-bVc" firstAttribute="top" secondItem="ta1-VY-Iy8" secondAttribute="topMargin" id="iZn-TM-UaB"/>
                                                 <constraint firstItem="HB1-iW-dSx" firstAttribute="top" secondItem="I8y-6n-bVc" secondAttribute="bottom" constant="8" id="pGd-aw-Syz"/>
@@ -330,6 +335,7 @@
                                             <outlet property="movieImage" destination="bt2-l6-MmK" id="nob-e7-0Py"/>
                                             <outlet property="movieOverview" destination="HB1-iW-dSx" id="h3R-5U-UAP"/>
                                             <outlet property="movieTitleAndYear" destination="I8y-6n-bVc" id="b4K-4Y-tSK"/>
+                                            <outlet property="spinLoadingImage" destination="1ey-U8-MDK" id="qxe-dN-V9q"/>
                                             <outlet property="youtubeBtn" destination="xWe-nN-AQk" id="eVf-Zo-vui"/>
                                         </connections>
                                     </tableViewCell>
@@ -339,20 +345,26 @@
                                     <outlet property="delegate" destination="Ip2-2W-cjY" id="GAR-RC-Rmn"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-Dw-mll">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xah-d7-fng" secondAttribute="trailing" id="5UJ-ef-YtU"/>
+                            <constraint firstItem="lLi-Dw-mll" firstAttribute="centerY" secondItem="64d-N9-OPO" secondAttribute="centerY" id="Dce-xT-zqy"/>
                             <constraint firstItem="hkD-4c-eTM" firstAttribute="top" secondItem="8XS-2a-qlG" secondAttribute="bottom" constant="5" id="Q9P-QR-qze"/>
                             <constraint firstItem="xah-d7-fng" firstAttribute="top" secondItem="k6F-RG-iPk" secondAttribute="bottom" id="VUB-y2-byT"/>
                             <constraint firstItem="xah-d7-fng" firstAttribute="leading" secondItem="64d-N9-OPO" secondAttribute="leading" id="WtU-0R-AhS"/>
                             <constraint firstItem="8XS-2a-qlG" firstAttribute="leading" secondItem="64d-N9-OPO" secondAttribute="leading" constant="5" id="WyA-uf-knI"/>
+                            <constraint firstItem="lLi-Dw-mll" firstAttribute="centerX" secondItem="64d-N9-OPO" secondAttribute="centerX" id="dDX-rF-ZVR"/>
                             <constraint firstItem="8XS-2a-qlG" firstAttribute="top" secondItem="xah-d7-fng" secondAttribute="bottom" constant="5" id="dWr-py-Qrj"/>
                             <constraint firstAttribute="trailing" secondItem="8XS-2a-qlG" secondAttribute="trailing" constant="5" id="mTh-j5-Cd6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="xah-d7-fng" id="xfm-6T-T8p"/>
+                        <outlet property="spinLoadingMovies" destination="lLi-Dw-mll" id="OFu-w6-ceZ"/>
                         <outlet property="tableView" destination="8XS-2a-qlG" id="O9n-Kk-Mhd"/>
                         <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="uLc-i0-dl9"/>
                         <segue destination="lPP-2i-dZK" kind="show" identifier="showDetailsVC" id="ntM-p6-ht7"/>
