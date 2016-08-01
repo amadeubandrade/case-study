@@ -21,8 +21,8 @@ extension SearchVC {
         } else {
             resetRequests()
 
-            let text = searchText.lowercaseString
-            let textToUrl = text.stringByFoldingWithOptions(.DiacriticInsensitiveSearch, locale: NSLocale.currentLocale())
+            let text = searchText.lowercaseString.stringByFoldingWithOptions(.DiacriticInsensitiveSearch, locale: NSLocale.currentLocale())
+            let textToUrl = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
             
             downloadSearchedMovies(textToUrl, completed: { (success) in
                     self.tableView.reloadData()
