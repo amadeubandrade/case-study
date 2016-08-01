@@ -273,7 +273,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="590" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-6n-bVc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-6n-bVc">
                                                     <rect key="frame" x="8" y="8" width="574" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="xdu-Ob-lVd"/>
@@ -468,7 +468,7 @@
         <image name="search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ywb-bM-x6k"/>
+        <segue reference="uLc-i0-dl9"/>
         <segue reference="ntM-p6-ht7"/>
     </inferredMetricsTieBreakers>
 </document>
