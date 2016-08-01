@@ -20,6 +20,7 @@ let URL_BASE = "https://api.trakt.tv/"
 //MARK: - Segues
 let SEGUE_SEARCH_VC = "showSearchVC"
 let SEGUE_WEB_VC = "showWebVC"
+let SEGUE_DETAILS_VC = "showDetailsVC"
 
 //MARK: - Requests
 let REQUEST_PAGE_LIMIT = 10

@@ -12,16 +12,19 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Table View Methods
     
+    //MARK: Number of sections
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     
+    //MARK: Number of rows per section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return popularMovies.count
     }
     
     
+    //MARK: Cell configurations
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PopularMovieCell") as? PopularMovieCell {
             let movie = popularMovies[indexPath.row]
@@ -46,5 +49,13 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
         }
         return PopularMovieCell()
     }
+    
+    
+    //MARK: Cell Selection
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let movie = popularMovies[indexPath.row]
+        performSegueWithIdentifier(SEGUE_DETAILS_VC, sender: movie)
+    }
+    
     
 }

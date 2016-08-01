@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -115,11 +116,99 @@
                     <connections>
                         <outlet property="tableView" destination="cFc-Ih-Nir" id="YYz-17-Odb"/>
                         <segue destination="Ip2-2W-cjY" kind="show" identifier="showSearchVC" id="ITJ-Xl-bbp"/>
+                        <segue destination="lPP-2i-dZK" kind="show" identifier="showDetailsVC" id="hVg-Jb-rDI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981" y="295"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="uLu-J9-OKg">
+            <objects>
+                <viewController id="lPP-2i-dZK" customClass="DetailsVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6aa-bc-eAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="e7v-xj-kt0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b2d-eb-faI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight (2010)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66j-xP-fRe">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mZc-9H-MdI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-jX-VX2">
+                                <rect key="frame" x="20" y="122" width="560" height="458"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noMovie" translatesAutoresizingMaskIntoConstraints="NO" id="azh-tG-Kck">
+                                        <rect key="frame" x="195" y="0.0" width="170" height="228"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="azh-tG-Kck" secondAttribute="height" multiplier="85:114" id="gSj-vC-iDl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-C7-Zeu" userLabel="linksSV">
+                                        <rect key="frame" x="218" y="238" width="125" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1v-1A-TDB">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="RXX-AL-6fU"/>
+                                                    <constraint firstAttribute="width" constant="35" id="eIG-Nb-dt8"/>
+                                                </constraints>
+                                                <state key="normal" image="homepage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGk-AV-PaI">
+                                                <rect key="frame" x="45" y="0.0" width="35" height="35"/>
+                                                <state key="normal" image="YouTube"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-Et-8NM">
+                                                <rect key="frame" x="90" y="0.0" width="35" height="35"/>
+                                                <state key="normal" image="IMDb"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="DLA-rz-rSN"/>
+                                            <constraint firstAttribute="height" constant="35" id="WEp-Ku-BLC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bjg-RD-lSm">
+                                        <rect key="frame" x="1" y="283" width="558" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="at3-AE-Dxg"/>
+                                        </constraints>
+                                        <string key="text">The Dark Knight of Gotham City confronts a dastardly duo: Two-Face and the Riddler. Formerly District Attorney Harvey Dent, Two-Face believes Batman caused the courtroom accident which left him disfigured on one side. And Edward Nygma, computer-genius and former employee of millionaire Bruce Wayne, is out to get the philanthropist; as The Riddler. Former circus acrobat Dick Grayson, his family killed by Two-Face, becomes Wayne's ward and Batman's new partner Robin.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="66j-xP-fRe" firstAttribute="top" secondItem="6aa-bc-eAJ" secondAttribute="bottom" constant="8" id="3fz-Vt-1dF"/>
+                            <constraint firstAttribute="trailing" secondItem="ZOb-jX-VX2" secondAttribute="trailing" constant="20" id="Iia-AF-eef"/>
+                            <constraint firstItem="e7v-xj-kt0" firstAttribute="top" secondItem="ZOb-jX-VX2" secondAttribute="bottom" constant="20" id="Jkp-fd-63d"/>
+                            <constraint firstItem="ZOb-jX-VX2" firstAttribute="leading" secondItem="b2d-eb-faI" secondAttribute="leading" constant="20" id="diA-fo-xxV"/>
+                            <constraint firstItem="66j-xP-fRe" firstAttribute="leading" secondItem="b2d-eb-faI" secondAttribute="leadingMargin" id="iEr-HS-bMp"/>
+                            <constraint firstItem="66j-xP-fRe" firstAttribute="trailing" secondItem="b2d-eb-faI" secondAttribute="trailingMargin" id="x2p-t9-qUV"/>
+                            <constraint firstItem="ZOb-jX-VX2" firstAttribute="top" secondItem="66j-xP-fRe" secondAttribute="bottom" constant="20" id="zzC-wE-UFv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="ywb-bM-x6k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWp-f5-2F1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="1039"/>
         </scene>
         <!-- -->
         <scene sceneID="Z5v-q5-kbS">
@@ -288,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ap-Vy-fTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="991"/>
+            <point key="canvasLocation" x="1699" y="1014"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kyh-rF-oxZ">
@@ -323,4 +412,7 @@
         <image name="noMovie" width="240" height="350"/>
         <image name="search" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ywb-bM-x6k"/>
+    </inferredMetricsTieBreakers>
 </document>
