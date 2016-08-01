@@ -14,7 +14,6 @@ class PopularMovieCell: UITableViewCell {
     //MARK: - Properties
     
     var bannerRequest: Request?
-    let acceptableContentType = ["image/jpeg", "image/gif", "image/png"]
     
 
     //MARK: - Outlets
@@ -45,7 +44,7 @@ class PopularMovieCell: UITableViewCell {
             if let cachedImg = CacheService.cache.retrieveFromCache(banner) {
                 self.movieImage.image = cachedImg
             } else {
-                bannerRequest = Alamofire.request(.GET, banner).validate(contentType: acceptableContentType).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+                bannerRequest = Alamofire.request(.GET, banner).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                     if error != nil {
                         self.hideOutlets(banner: true, labels: false)
                         self.movieName.text = movie.name

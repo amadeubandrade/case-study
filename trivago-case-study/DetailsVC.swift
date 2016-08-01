@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailsVC: UIViewController {
     
@@ -42,7 +43,16 @@ class DetailsVC: UIViewController {
             if let img = CacheService.cache.retrieveFromCache(imageUrl) {
                 movieImage.image = img
             } else {
-                //DOWNLOAD
+                Alamofire.request(.GET, imageUrl).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+                    if error != nil {
+                        let img = UIImage(named: "noMovie")
+                        self.movieImage.image = img
+                    } else if let imgData = data {
+                        let img = UIImage(data: imgData)!
+                        self.movieImage.image = img
+                        CacheService.cache.addToCache(img, key: imageUrl)
+                    }
+                })
             }
         } else {
             let img = UIImage(named: "noMovie")

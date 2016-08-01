@@ -29,3 +29,4 @@ let REQUEST_HEADER = [
     "trakt-api-version": "2",
     "trakt-api-key": KEY_TRAKT
 ]
+let REQUEST_CONTENT_TYPE = ["image/jpeg", "image/gif", "image/png"]

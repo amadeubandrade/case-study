@@ -14,7 +14,6 @@ class SearchMovieCell: UITableViewCell {
     //MARK: - Properties
     
     var posterRequest: Request?
-    let acceptableContentType = ["image/jpeg", "image/gif", "image/png"]
     var delegate:MyCustomCellDelegator!
     var imdbUrl: String?
     var youtubeUrl: String?
@@ -63,7 +62,7 @@ class SearchMovieCell: UITableViewCell {
             if let cachedImage = CacheService.cache.retrieveFromCache(posterUrl) {
                 movieImage.image = cachedImage
             } else {
-                posterRequest = Alamofire.request(.GET, posterUrl).validate(contentType: acceptableContentType).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+                posterRequest = Alamofire.request(.GET, posterUrl).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                     if error != nil {
                         self.movieImage.image = UIImage(named: "noMovie")
                     } else if let imgData = data {
