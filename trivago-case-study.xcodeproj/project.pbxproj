@@ -25,6 +25,7 @@
 		E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86861D4E18B800C72E2E /* WebVC.swift */; };
 		E0DC86891D4E384B00C72E2E /* MyCustomCellDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */; };
 		E0DC868F1D4F5AC100C72E2E /* SpinIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */; };
+		E0DC86921D4F624100C72E2E /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86911D4F624100C72E2E /* CacheService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E0DC86861D4E18B800C72E2E /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCellDelegator.swift; sourceTree = "<group>"; };
 		E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinIndicator.swift; sourceTree = "<group>"; };
+		E0DC86911D4F624100C72E2E /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		E01FA5C61D4A52DA00408C01 /* trivago-case-study */ = {
 			isa = PBXGroup;
 			children = (
+				E0DC86901D4F619E00C72E2E /* Services */,
 				E01FA5D91D4A712100408C01 /* Model */,
 				E01FA5DA1D4A712D00408C01 /* View */,
 				E01FA5DB1D4A713100408C01 /* Controller */,
@@ -154,6 +157,14 @@
 				E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		E0DC86901D4F619E00C72E2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0DC86911D4F624100C72E2E /* CacheService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
 				E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */,
 				E0DC868F1D4F5AC100C72E2E /* SpinIndicator.swift in Sources */,
+				E0DC86921D4F624100C72E2E /* CacheService.swift in Sources */,
 				E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */,
 				E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */,
 				E01FA5E11D4A8E7A00408C01 /* InitialVC+TableView.swift in Sources */,

@@ -90,7 +90,6 @@ extension SearchVC {
                                     if let poster = images["poster"] as? [String: AnyObject] {
                                         if let posterStr = poster["thumb"] as? String {
                                             posterURL = posterStr
-                                            //TODO: - Download image
                                         }
                                     }
                                 }

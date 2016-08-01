@@ -60,7 +60,25 @@ class SearchMovieCell: UITableViewCell {
     //MARK: - Cell Configuration
     
     func configureCell(movie: Movie) {
-        // movieImage.image =
+        
+        if let posterUrl = movie.posterUrl {
+            movieImage.image = nil
+            
+            if let cachedImage = CacheService.cache.retrieveFromCache(posterUrl) {
+                movieImage.image = cachedImage
+            } else {
+                posterRequest = Alamofire.request(.GET, posterUrl).validate(contentType: acceptableContentType).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+                    if error != nil {
+                        self.movieImage.image = UIImage(named: "noMovie")
+                    } else if let imgData = data {
+                        let img = UIImage(data: imgData)!
+                        self.movieImage.image = img
+                        CacheService.cache.addToCache(img, key: posterUrl)
+                    }
+                })
+            }
+        }
+        
         movieTitleAndYear.text = "\(movie.name) (\(movie.year))"
         movieOverview.text = movie.overview
         configureLinkBtns(movie.homepageUrl, youtube: movie.youtubeUrl, imdb: movie.imdbUrl)
