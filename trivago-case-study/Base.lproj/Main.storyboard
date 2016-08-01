@@ -355,6 +355,7 @@
                         <outlet property="searchBar" destination="xah-d7-fng" id="xfm-6T-T8p"/>
                         <outlet property="tableView" destination="8XS-2a-qlG" id="O9n-Kk-Mhd"/>
                         <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="uLc-i0-dl9"/>
+                        <segue destination="lPP-2i-dZK" kind="show" identifier="showDetailsVC" id="ntM-p6-ht7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGk-It-1xJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,6 +429,7 @@
         <image name="search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ywb-bM-x6k"/>
+        <segue reference="ntM-p6-ht7"/>
+        <segue reference="uLc-i0-dl9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -62,6 +62,13 @@ class SearchVC: UIViewController, UISearchBarDelegate, MyCustomCellDelegator {
                 }
             }
         }
+        if segue.identifier == SEGUE_DETAILS_VC {
+            if let detailsVC = segue.destinationViewController as? DetailsVC {
+                if let movie = sender as? Movie {
+                    detailsVC.movie = movie
+                }
+            }
+        }
     }
 
 

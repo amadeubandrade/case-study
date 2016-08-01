@@ -48,5 +48,12 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         return SearchMovieCell()
     }
     
+    
+    //MARK: Cell selection
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let movie = filteredMovies[indexPath.row]
+        performSegueWithIdentifier(SEGUE_DETAILS_VC, sender: movie)
+    }
+    
 
 }
