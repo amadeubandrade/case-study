@@ -24,10 +24,23 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource, MyCustomCellDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("SearchMovieCell") as? SearchMovieCell {
-            let movie = filteredMovies[indexPath.row]
-            cell.configureCell(movie)
-            cell.delegate = self
-            return cell
+
+            if filteredMovies.count != 0 {
+                let movie = filteredMovies[indexPath.row]
+                
+                if indexPath.row == filteredMovies.count - 1 {
+                    actualPageNumber += 1
+                    downloadSearchedMovies(textToSearch!, pageNumber: actualPageNumber, completed: { (success) in
+                        self.tableView.reloadData()
+                    })
+                }
+                cell.posterRequest?.cancel()
+                cell.configureCell(movie)
+                cell.delegate = self
+                return cell
+            } else {
+                return SearchMovieCell()
+            }
         }
         return SearchMovieCell()
     }

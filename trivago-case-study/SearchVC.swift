@@ -17,6 +17,8 @@ class SearchVC: UIViewController, UISearchBarDelegate {
     var movieRequest: Request?
     var imageRequest: Request?
     var actualPageNumber = 1
+    var textToSearch: String?
+    
     
     //MARK: - IBOutlets
     
@@ -39,6 +41,7 @@ class SearchVC: UIViewController, UISearchBarDelegate {
         movieRequest?.cancel()
         imageRequest?.cancel()
         filteredMovies = []
+        actualPageNumber = 1
     }
 
 

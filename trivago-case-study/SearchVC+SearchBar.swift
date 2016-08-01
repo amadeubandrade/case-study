@@ -20,11 +20,9 @@ extension SearchVC {
             tableView.reloadData()
         } else {
             resetRequests()
-
             let text = searchText.lowercaseString.stringByFoldingWithOptions(.DiacriticInsensitiveSearch, locale: NSLocale.currentLocale())
-            let textToUrl = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
-            
-            downloadSearchedMovies(textToUrl, completed: { (success) in
+            textToSearch = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())
+            downloadSearchedMovies(textToSearch!, pageNumber: actualPageNumber, completed: { (success) in
                     self.tableView.reloadData()
             })
         }
@@ -37,17 +35,15 @@ extension SearchVC {
     
     //MARK: - Download 
     
-    func downloadSearchedMovies(text: String, completed: downloadCompleted) {
+    func downloadSearchedMovies(text: String, pageNumber: Int, completed: downloadCompleted) {
 
         let urlStr = URL_BASE + "/search/movie?query=" + text
         
         let parameters : [String: AnyObject] = [
             "extended": "full,images",
             "limit": REQUEST_PAGE_LIMIT,
-            "page": actualPageNumber
+            "page": pageNumber
         ]
-        
-        print(urlStr)
         
         if let url = NSURL(string: urlStr) {
             movieRequest = Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: REQUEST_HEADER).responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) in
