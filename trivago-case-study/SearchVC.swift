@@ -31,6 +31,15 @@ class SearchVC: UIViewController, UISearchBarDelegate {
         searchBar.delegate = self
         searchBar.returnKeyType = .Done
     }
+    
+    
+    //MARK: - Auxiliary Functions
+    
+    func resetRequests() {
+        movieRequest?.cancel()
+        imageRequest?.cancel()
+        filteredMovies = []
+    }
 
 
 }

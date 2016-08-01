@@ -13,10 +13,6 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Table View Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if popularMovies.isEmpty {
-            TableViewHelper.EmptyMessage("No results to display.", tableView: tableView)
-            return 0
-        }
         return 1
     }
     

@@ -31,7 +31,7 @@ class InitialVC: UIViewController {
             if success {
                 self.tableView.reloadData()
             } else {
-                let alert = UIAlertController(title: "Problem found!", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "Problem found", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
                 let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)

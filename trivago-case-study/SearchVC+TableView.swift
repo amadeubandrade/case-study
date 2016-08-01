@@ -13,10 +13,6 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource, MyCustomCellDele
     //MARK: - Table View Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if filteredMovies.isEmpty {
-            TableViewHelper.EmptyMessage("No results to display.", tableView: tableView)
-            return 0
-        }
         return 1
     }
     

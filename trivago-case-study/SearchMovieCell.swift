@@ -25,7 +25,7 @@ class SearchMovieCell: UITableViewCell {
     
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieTitleAndYear: UILabel!
-    @IBOutlet weak var movieOverview: UILabel!
+    @IBOutlet weak var movieOverview: UITextView!
     @IBOutlet weak var homepageBtn: UIButton!
     @IBOutlet weak var youtubeBtn: UIButton!
     @IBOutlet weak var imdbBtn: UIButton!
@@ -35,6 +35,10 @@ class SearchMovieCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    override func drawRect(rect: CGRect) {
+        movieOverview.setContentOffset(CGPointZero, animated: false)
     }
     
     

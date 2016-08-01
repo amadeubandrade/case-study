@@ -16,23 +16,16 @@ extension SearchVC {
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             view.endEditing(true)
+            resetRequests()
+            tableView.reloadData()
         } else {
-            print(searchText)
-            movieRequest?.cancel()
-            imageRequest?.cancel()
-            filteredMovies = []
+            resetRequests()
 
             let text = searchText.lowercaseString
+            let textToUrl = text.stringByFoldingWithOptions(.DiacriticInsensitiveSearch, locale: NSLocale.currentLocale())
             
-            downloadSearchedMovies(text, completed: { (success) in
-                if success {
+            downloadSearchedMovies(textToUrl, completed: { (success) in
                     self.tableView.reloadData()
-                } else {
-                    let alert = UIAlertController(title: "Problem found", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
-                    let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
-                    alert.addAction(action)
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
             })
         }
     }
@@ -54,10 +47,12 @@ extension SearchVC {
             "page": actualPageNumber
         ]
         
+        print(urlStr)
+        
         if let url = NSURL(string: urlStr) {
             movieRequest = Alamofire.request(.GET, url, parameters: parameters, encoding: .URL, headers: REQUEST_HEADER).responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) in
 
-                if let result = response.result.value as? [[String: AnyObject]] where !result.isEmpty {
+                if let result = response.result.value as? [[String: AnyObject]] {
 
                     for movieEntry in result {
 
@@ -103,14 +98,12 @@ extension SearchVC {
                                 self.filteredMovies.append(movieResult)
                             }
                         } else {
-                            //TODO: - NO MOVIES TO SHOW
                             completed(success: false)
                         }
                     }
                     completed(success: true)
                 
                 } else {
-                    //no results to show -> ALERT IN THIS MOMENT.. change it
                     completed(success: false)
                 }
             })

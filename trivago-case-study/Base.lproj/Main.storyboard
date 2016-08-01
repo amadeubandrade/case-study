@@ -133,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xah-d7-fng">
+                            <searchBar contentMode="redraw" placeholder="Search for a movie" translatesAutoresizingMaskIntoConstraints="NO" id="xah-d7-fng">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="CJW-iF-TVe"/>
@@ -147,7 +147,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchMovieCell" rowHeight="262" id="CjL-Sl-eVy" customClass="SearchMovieCell" customModule="trivago_case_study" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="590" height="262"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CjL-Sl-eVy" id="ta1-VY-Iy8">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="CjL-Sl-eVy" id="ta1-VY-Iy8">
                                             <rect key="frame" x="0.0" y="0.0" width="590" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -157,13 +157,6 @@
                                                         <constraint firstAttribute="height" constant="21" id="xdu-Ob-lVd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcZ-5e-Gc5">
-                                                    <rect key="frame" x="137" y="32" width="445" height="221"/>
-                                                    <string key="text">Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.</string>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -203,19 +196,27 @@
                                                         <constraint firstAttribute="width" constant="121" id="lHC-ui-vOE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HB1-iW-dSx">
+                                                    <rect key="frame" x="137" y="37" width="445" height="216"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bt2-l6-MmK" firstAttribute="top" secondItem="I8y-6n-bVc" secondAttribute="bottom" constant="8" id="63J-1r-l71"/>
                                                 <constraint firstItem="bt2-l6-MmK" firstAttribute="leading" secondItem="ta1-VY-Iy8" secondAttribute="leadingMargin" id="Fkm-P2-g7k"/>
                                                 <constraint firstItem="6sA-lF-96T" firstAttribute="top" secondItem="bt2-l6-MmK" secondAttribute="bottom" constant="8" id="Gdp-qC-RUz"/>
-                                                <constraint firstItem="CcZ-5e-Gc5" firstAttribute="bottom" secondItem="ta1-VY-Iy8" secondAttribute="bottomMargin" id="OCI-LZ-yiu"/>
                                                 <constraint firstItem="6sA-lF-96T" firstAttribute="centerX" secondItem="bt2-l6-MmK" secondAttribute="centerX" id="Rgf-Jy-sxU"/>
-                                                <constraint firstItem="CcZ-5e-Gc5" firstAttribute="leading" secondItem="bt2-l6-MmK" secondAttribute="trailing" constant="8" id="d36-MB-7m2"/>
-                                                <constraint firstItem="CcZ-5e-Gc5" firstAttribute="trailing" secondItem="ta1-VY-Iy8" secondAttribute="trailingMargin" id="gbg-ho-zC5"/>
+                                                <constraint firstItem="HB1-iW-dSx" firstAttribute="trailing" secondItem="ta1-VY-Iy8" secondAttribute="trailingMargin" id="h3p-tW-uMd"/>
                                                 <constraint firstItem="I8y-6n-bVc" firstAttribute="top" secondItem="ta1-VY-Iy8" secondAttribute="topMargin" id="iZn-TM-UaB"/>
+                                                <constraint firstItem="HB1-iW-dSx" firstAttribute="top" secondItem="I8y-6n-bVc" secondAttribute="bottom" constant="8" id="pGd-aw-Syz"/>
+                                                <constraint firstItem="HB1-iW-dSx" firstAttribute="bottom" secondItem="ta1-VY-Iy8" secondAttribute="bottomMargin" id="qsp-8J-tnb"/>
                                                 <constraint firstItem="6sA-lF-96T" firstAttribute="bottom" secondItem="ta1-VY-Iy8" secondAttribute="bottomMargin" id="tzq-Ui-dNN"/>
+                                                <constraint firstItem="HB1-iW-dSx" firstAttribute="leading" secondItem="bt2-l6-MmK" secondAttribute="trailing" constant="8" id="xIu-OG-R4u"/>
                                                 <constraint firstItem="I8y-6n-bVc" firstAttribute="leading" secondItem="ta1-VY-Iy8" secondAttribute="leadingMargin" id="yDQ-L8-4L1"/>
-                                                <constraint firstItem="CcZ-5e-Gc5" firstAttribute="top" secondItem="I8y-6n-bVc" secondAttribute="bottom" constant="3" id="yY2-Q5-13k"/>
                                                 <constraint firstItem="I8y-6n-bVc" firstAttribute="trailing" secondItem="ta1-VY-Iy8" secondAttribute="trailingMargin" id="ydU-aV-ThG"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -224,7 +225,7 @@
                                             <outlet property="homepageBtn" destination="v3I-4S-8Uh" id="bXO-TW-HTc"/>
                                             <outlet property="imdbBtn" destination="1yY-4d-ORv" id="qKf-b8-gB2"/>
                                             <outlet property="movieImage" destination="bt2-l6-MmK" id="nob-e7-0Py"/>
-                                            <outlet property="movieOverview" destination="CcZ-5e-Gc5" id="jTw-u8-4nl"/>
+                                            <outlet property="movieOverview" destination="HB1-iW-dSx" id="h3R-5U-UAP"/>
                                             <outlet property="movieTitleAndYear" destination="I8y-6n-bVc" id="b4K-4Y-tSK"/>
                                             <outlet property="youtubeBtn" destination="xWe-nN-AQk" id="eVf-Zo-vui"/>
                                         </connections>
