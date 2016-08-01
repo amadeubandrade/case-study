@@ -11,13 +11,11 @@ import WebKit
 
 class WebVC: UIViewController {
     
-    //TODO: - ADD SPIN INDICATOR
-    
     //MARK: - Properties
     
     var webView: WKWebView!
     var urlStr: String!
-    
+    var spinIndicator = SpinIndicator()
 
     //MARK: - IBOutlets
     

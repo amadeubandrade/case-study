@@ -24,6 +24,7 @@
 		E0DC86851D4E0B5000C72E2E /* SearchMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */; };
 		E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86861D4E18B800C72E2E /* WebVC.swift */; };
 		E0DC86891D4E384B00C72E2E /* MyCustomCellDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */; };
+		E0DC868F1D4F5AC100C72E2E /* SpinIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E0DC86841D4E0B4F00C72E2E /* SearchMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieCell.swift; sourceTree = "<group>"; };
 		E0DC86861D4E18B800C72E2E /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCellDelegator.swift; sourceTree = "<group>"; };
+		E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				E01FA5D31D4A52DA00408C01 /* Info.plist */,
 				E01FA5E31D4A8F4600408C01 /* Constants.swift */,
 				E0DC86881D4E384B00C72E2E /* MyCustomCellDelegator.swift */,
+				E0DC868E1D4F5AC100C72E2E /* SpinIndicator.swift */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				E0DC86891D4E384B00C72E2E /* MyCustomCellDelegator.swift in Sources */,
 				E01FA5DF1D4A884300408C01 /* PopularMovieCell.swift in Sources */,
 				E0DC86831D4E06D400C72E2E /* SearchVC+SearchBar.swift in Sources */,
+				E0DC868F1D4F5AC100C72E2E /* SpinIndicator.swift in Sources */,
 				E01FA5DD1D4A845400408C01 /* BorderedShadowedView.swift in Sources */,
 				E0DC86871D4E18B900C72E2E /* WebVC.swift in Sources */,
 				E01FA5E11D4A8E7A00408C01 /* InitialVC+TableView.swift in Sources */,
