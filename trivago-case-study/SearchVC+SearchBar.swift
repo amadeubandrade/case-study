@@ -35,6 +35,7 @@ extension SearchVC {
         view.endEditing(false)
     }
     
+    
     //MARK: - Download 
     
     func downloadSearchedMovies(text: String, pageNumber: Int, completed: downloadCompleted) {

@@ -22,6 +22,7 @@ class InitialVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingMoviesIndicator: UIActivityIndicatorView!
     
+    
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -131,6 +132,7 @@ class InitialVC: UIViewController {
     
     
     //MARK: - Segues
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SEGUE_DETAILS_VC {
             if let detailsVC = segue.destinationViewController as? DetailsVC {
