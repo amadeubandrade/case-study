@@ -11,11 +11,6 @@ import Alamofire
 
 class PopularMovieCell: UITableViewCell {
     
-    //MARK: - Properties
-    
-    var bannerRequest: Request?
-    
-
     //MARK: - Outlets
     
     @IBOutlet weak var movieName: UILabel!
@@ -47,7 +42,7 @@ class PopularMovieCell: UITableViewCell {
                 self.movieImage.image = cachedImg
                 loadingBannerIndicator.stopAnimating()
             } else {
-                bannerRequest = Alamofire.request(.GET, banner).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+                Alamofire.request(.GET, banner).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                     if error != nil {
                         self.hideOutlets(banner: true, labels: false)
                         self.loadingBannerIndicator.stopAnimating()
