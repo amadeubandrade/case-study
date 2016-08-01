@@ -36,6 +36,10 @@ class SearchMovieCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    override func drawRect(rect: CGRect) {
+        movieOverview.scrollRangeToVisible(NSMakeRange(0, 0))
+    }
+    
     
     //MARK: - IBActions
     
@@ -76,7 +80,6 @@ class SearchMovieCell: UITableViewCell {
         
         movieTitleAndYear.text = "\(movie.name) (\(movie.year))"
         movieOverview.text = movie.overview
-        movieOverview.setContentOffset(CGPointZero, animated: false)
         configureLinkBtns(movie.homepageUrl, youtube: movie.youtubeUrl, imdb: movie.imdbUrl)
     }
 
