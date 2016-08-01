@@ -20,17 +20,20 @@ class InitialVC: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var loadingMoviesIndicator: UIActivityIndicatorView!
     
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadingMoviesIndicator.hidesWhenStopped = true
+        loadingMoviesIndicator.startAnimating()
         downloadPopularMovies(actualPageNumber) { (success) in
             if success {
                 self.tableView.reloadData()
+                self.loadingMoviesIndicator.stopAnimating()
             } else {
+                self.loadingMoviesIndicator.stopAnimating()
                 let alert = UIAlertController(title: "Problem found", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
                 let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
                 alert.addAction(action)

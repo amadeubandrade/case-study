@@ -31,10 +31,13 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
             
             if indexPath.row == popularMovies.count - 1 {
                 actualPageNumber += 1
+                loadingMoviesIndicator.startAnimating()
                 downloadPopularMovies(actualPageNumber, completed: { (success) in
                     if success {
                         tableView.reloadData()
+                        self.loadingMoviesIndicator.stopAnimating()
                     } else {
+                        self.loadingMoviesIndicator.stopAnimating()
                         let alert = UIAlertController(title: "Problem found", message: "There was a problem with your request. Please try again later.", preferredStyle: .Alert)
                         let action = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
                         alert.addAction(action)

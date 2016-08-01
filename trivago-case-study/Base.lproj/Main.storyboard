@@ -60,6 +60,9 @@
                                                                 <constraint firstAttribute="width" constant="16" id="fgs-VJ-fwc"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-4h-I2o">
+                                                            <rect key="frame" x="277" y="46" width="20" height="20"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -67,7 +70,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="DMO-cE-2qA" secondAttribute="trailing" constant="2" id="FGP-hr-1gb"/>
                                                         <constraint firstItem="DMO-cE-2qA" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="I1Q-8l-PFt"/>
                                                         <constraint firstItem="5El-pb-t0J" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" constant="20" id="MT5-HM-Qak"/>
+                                                        <constraint firstItem="dX2-4h-I2o" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="Qeq-yn-RPU"/>
                                                         <constraint firstItem="DMO-cE-2qA" firstAttribute="leading" secondItem="5El-pb-t0J" secondAttribute="trailing" constant="2" id="R9b-x7-frV"/>
+                                                        <constraint firstItem="dX2-4h-I2o" firstAttribute="centerX" secondItem="ix8-hL-mdH" secondAttribute="centerX" id="XZ2-IF-HkP"/>
                                                         <constraint firstAttribute="bottom" secondItem="576-vZ-nVN" secondAttribute="bottom" id="aFg-Bv-bSB"/>
                                                         <constraint firstItem="576-vZ-nVN" firstAttribute="leading" secondItem="ix8-hL-mdH" secondAttribute="leading" id="cYy-DL-CRV"/>
                                                         <constraint firstItem="5El-pb-t0J" firstAttribute="centerY" secondItem="ix8-hL-mdH" secondAttribute="centerY" id="jh2-WN-Wyi"/>
@@ -84,6 +89,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="loadingBannerIndicator" destination="dX2-4h-I2o" id="bfX-BM-bux"/>
                                             <outlet property="movieImage" destination="576-vZ-nVN" id="NJJ-yr-evL"/>
                                             <outlet property="movieName" destination="Fbk-0p-n2a" id="hRZ-rO-Vfq"/>
                                             <outlet property="movieYear" destination="3KS-db-pbb" id="J0z-cO-k3i"/>
@@ -95,13 +101,18 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="h5P-qG-BXr"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rwH-vH-1CJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cFc-Ih-Nir" secondAttribute="trailing" constant="5" id="9sc-E8-1Op"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFc-Ih-Nir" secondAttribute="bottom" constant="5" id="DM0-qi-ohf"/>
                             <constraint firstItem="cFc-Ih-Nir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="E6Q-ub-I1s"/>
+                            <constraint firstItem="rwH-vH-1CJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zy6-AB-A5n"/>
                             <constraint firstItem="cFc-Ih-Nir" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="qrc-hT-axG"/>
+                            <constraint firstItem="rwH-vH-1CJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rWu-jO-bA2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trivago: Case Study" id="8ok-b5-H2y">
@@ -114,6 +125,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadingMoviesIndicator" destination="rwH-vH-1CJ" id="9WN-HJ-ZLz"/>
                         <outlet property="tableView" destination="cFc-Ih-Nir" id="YYz-17-Odb"/>
                         <segue destination="Ip2-2W-cjY" kind="show" identifier="showSearchVC" id="ITJ-Xl-bbp"/>
                         <segue destination="lPP-2i-dZK" kind="show" identifier="showDetailsVC" id="hVg-Jb-rDI"/>
@@ -441,7 +453,7 @@
         <image name="search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ntM-p6-ht7"/>
+        <segue reference="hVg-Jb-rDI"/>
         <segue reference="uLc-i0-dl9"/>
     </inferredMetricsTieBreakers>
 </document>
