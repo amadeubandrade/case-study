@@ -17,7 +17,6 @@ extension SearchVC {
         if searchText == "" {
             view.endEditing(true)
             resetRequests()
-            tableView.reloadData()
         } else {
             resetRequests()
             spinLoadingMovies.startAnimating()

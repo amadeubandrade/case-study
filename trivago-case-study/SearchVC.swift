@@ -43,6 +43,7 @@ class SearchVC: UIViewController, UISearchBarDelegate, MyCustomCellDelegator {
         imageRequest?.cancel()
         filteredMovies = []
         actualPageNumber = 1
+        tableView.reloadData()
     }
     
     

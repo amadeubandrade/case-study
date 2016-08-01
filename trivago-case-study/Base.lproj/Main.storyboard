@@ -147,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight (2010)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66j-xP-fRe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman: The Dark Knight (2010)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66j-xP-fRe">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mZc-9H-MdI"/>
@@ -468,7 +468,7 @@
         <image name="search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ywb-bM-x6k"/>
         <segue reference="ntM-p6-ht7"/>
-        <segue reference="uLc-i0-dl9"/>
     </inferredMetricsTieBreakers>
 </document>
