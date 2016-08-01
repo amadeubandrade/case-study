@@ -20,12 +20,15 @@ class WebVC: UIViewController {
     //MARK: - IBOutlets
     
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var loadingRequestIndicator: UIActivityIndicatorView!
     
     
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingRequestIndicator.hidesWhenStopped = true
+        loadingRequestIndicator.startAnimating()
         webView = WKWebView()
         container.addSubview(webView)
     }
@@ -43,6 +46,7 @@ class WebVC: UIViewController {
         if let urlstr = NSURL(string: urlStr) {
             let request = NSURLRequest(URL: urlstr)
             webView.loadRequest(request)
+            loadingRequestIndicator.stopAnimating()
         }
     }
 
