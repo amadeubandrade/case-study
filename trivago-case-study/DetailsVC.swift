@@ -24,12 +24,14 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var youtubeBtn: UIButton!
     @IBOutlet weak var imdbBtn: UIButton!
     @IBOutlet weak var movieOverview: UILabel!
-
+    @IBOutlet weak var movieSpinIndicator: UIActivityIndicatorView!
+    
     
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        movieSpinIndicator.hidesWhenStopped = true
         updateUI()
     }
     
@@ -51,18 +53,21 @@ class DetailsVC: UIViewController {
     
     func updateUI(){
         movieTitleAndYear.text = "\(movie.name) (\(movie.year))"
-        
+        movieSpinIndicator.startAnimating()
         if let imageUrl = movie.posterUrl {
             if let img = CacheService.cache.retrieveFromCache(imageUrl) {
                 movieImage.image = img
+                movieSpinIndicator.stopAnimating()
             } else {
                 Alamofire.request(.GET, imageUrl).validate(contentType: REQUEST_CONTENT_TYPE).response(completionHandler: { (_: NSURLRequest?, _: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
                     if error != nil {
                         let img = UIImage(named: "noMovie")
                         self.movieImage.image = img
+                        self.movieSpinIndicator.stopAnimating()
                     } else if let imgData = data {
                         let img = UIImage(data: imgData)!
                         self.movieImage.image = img
+                        self.movieSpinIndicator.stopAnimating()
                         CacheService.cache.addToCache(img, key: imageUrl)
                     }
                 })
@@ -70,6 +75,7 @@ class DetailsVC: UIViewController {
         } else {
             let img = UIImage(named: "noMovie")
             movieImage.image = img
+            movieSpinIndicator.stopAnimating()
         }
         
         configureLinkBtns(movie.homepageUrl, youtube: movie.youtubeUrl, imdb: movie.imdbUrl)

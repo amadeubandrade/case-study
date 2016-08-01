@@ -159,7 +159,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-jX-VX2">
                                 <rect key="frame" x="20" y="122" width="560" height="458"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noMovie" translatesAutoresizingMaskIntoConstraints="NO" id="azh-tG-Kck">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="azh-tG-Kck">
                                         <rect key="frame" x="195" y="0.0" width="170" height="228"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="azh-tG-Kck" secondAttribute="height" multiplier="85:114" id="gSj-vC-iDl"/>
@@ -211,12 +211,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Rlj-kn-mxh">
+                                <rect key="frame" x="290" y="226" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="66j-xP-fRe" firstAttribute="top" secondItem="6aa-bc-eAJ" secondAttribute="bottom" constant="8" id="3fz-Vt-1dF"/>
+                            <constraint firstItem="azh-tG-Kck" firstAttribute="centerY" secondItem="Rlj-kn-mxh" secondAttribute="centerY" id="AMc-x1-tAI"/>
                             <constraint firstAttribute="trailing" secondItem="ZOb-jX-VX2" secondAttribute="trailing" constant="20" id="Iia-AF-eef"/>
                             <constraint firstItem="e7v-xj-kt0" firstAttribute="top" secondItem="ZOb-jX-VX2" secondAttribute="bottom" constant="20" id="Jkp-fd-63d"/>
+                            <constraint firstItem="azh-tG-Kck" firstAttribute="centerX" secondItem="Rlj-kn-mxh" secondAttribute="centerX" id="bCz-vc-10G"/>
                             <constraint firstItem="ZOb-jX-VX2" firstAttribute="leading" secondItem="b2d-eb-faI" secondAttribute="leading" constant="20" id="diA-fo-xxV"/>
                             <constraint firstItem="66j-xP-fRe" firstAttribute="leading" secondItem="b2d-eb-faI" secondAttribute="leadingMargin" id="iEr-HS-bMp"/>
                             <constraint firstItem="66j-xP-fRe" firstAttribute="trailing" secondItem="b2d-eb-faI" secondAttribute="trailingMargin" id="x2p-t9-qUV"/>
@@ -228,6 +233,7 @@
                         <outlet property="imdbBtn" destination="aJh-Et-8NM" id="GVc-Ea-d1z"/>
                         <outlet property="movieImage" destination="azh-tG-Kck" id="pD3-zs-gYB"/>
                         <outlet property="movieOverview" destination="Bjg-RD-lSm" id="gUq-D3-8kc"/>
+                        <outlet property="movieSpinIndicator" destination="Rlj-kn-mxh" id="khK-X2-doz"/>
                         <outlet property="movieTitleAndYear" destination="66j-xP-fRe" id="qTP-qJ-bAN"/>
                         <outlet property="youtubeBtn" destination="yGk-AV-PaI" id="j5M-Tt-uit"/>
                         <segue destination="ndo-HQ-WFg" kind="show" identifier="showWebVC" id="ywb-bM-x6k"/>
@@ -306,7 +312,7 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noMovie" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-l6-MmK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-l6-MmK">
                                                     <rect key="frame" x="8" y="37" width="121" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="121" id="lHC-ui-vOE"/>
@@ -449,11 +455,10 @@
         <image name="arrow" width="25" height="25"/>
         <image name="back" width="25" height="25"/>
         <image name="homepage" width="35" height="35"/>
-        <image name="noMovie" width="240" height="350"/>
         <image name="search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hVg-Jb-rDI"/>
+        <segue reference="ntM-p6-ht7"/>
         <segue reference="uLc-i0-dl9"/>
     </inferredMetricsTieBreakers>
 </document>
