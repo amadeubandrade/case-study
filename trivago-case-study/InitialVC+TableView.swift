@@ -45,8 +45,6 @@ extension InitialVC: UITableViewDelegate, UITableViewDataSource {
                     }
                 })
             }
-            
-            cell.bannerRequest?.cancel()
             cell.configureCell(movie)
             return cell
         }
