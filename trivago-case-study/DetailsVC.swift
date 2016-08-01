@@ -34,6 +34,19 @@ class DetailsVC: UIViewController {
     }
     
     
+    //MARK: IBActions
+    
+    @IBAction func onLinkBtnPressed(sender: UIButton) {
+        if sender.tag == 0 {
+            performSegueWithIdentifier(SEGUE_WEB_VC, sender: movie.homepageUrl)
+        } else if sender.tag == 1 {
+            performSegueWithIdentifier(SEGUE_WEB_VC, sender: movie.youtubeUrl)
+        } else if sender.tag == 2 {
+            performSegueWithIdentifier(SEGUE_WEB_VC, sender: movie.imdbUrl)
+        }
+    }
+    
+    
     //MARK: - Update UI
     
     func updateUI(){
@@ -97,5 +110,17 @@ class DetailsVC: UIViewController {
         }
     }
 
+    
+    //MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SEGUE_WEB_VC {
+            if let webVC = segue.destinationViewController as? WebVC {
+                if let url = sender as? String {
+                    webVC.urlStr = url
+                }
+            }
+        }
+    }
 
 }

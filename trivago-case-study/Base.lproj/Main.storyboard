@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Trivago: Case Study-->
+        <!-- -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="InitialVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="InitialVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5El-pb-t0J" userLabel="movieInfoSV">
                                                             <rect key="frame" x="20" y="33" width="534" height="47"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" *****" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-0p-n2a">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" *****" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-0p-n2a">
                                                                     <rect key="frame" x="247" y="0.0" width="40" height="21"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="981" y="295"/>
         </scene>
-        <!--DetailsVC-->
+        <!-- -->
         <scene sceneID="uLu-J9-OKg">
             <objects>
-                <viewController id="lPP-2i-dZK" customClass="DetailsVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " id="lPP-2i-dZK" customClass="DetailsVC" customModule="trivago_case_study" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6aa-bc-eAJ"/>
                         <viewControllerLayoutGuide type="bottom" id="e7v-xj-kt0"/>
@@ -163,14 +163,23 @@
                                                     <constraint firstAttribute="width" constant="35" id="eIG-Nb-dt8"/>
                                                 </constraints>
                                                 <state key="normal" image="homepage"/>
+                                                <connections>
+                                                    <action selector="onLinkBtnPressed:" destination="lPP-2i-dZK" eventType="touchUpInside" id="ERz-3d-2TE"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGk-AV-PaI">
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGk-AV-PaI">
                                                 <rect key="frame" x="45" y="0.0" width="35" height="35"/>
                                                 <state key="normal" image="YouTube"/>
+                                                <connections>
+                                                    <action selector="onLinkBtnPressed:" destination="lPP-2i-dZK" eventType="touchUpInside" id="ZgV-Km-lqJ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-Et-8NM">
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-Et-8NM">
                                                 <rect key="frame" x="90" y="0.0" width="35" height="35"/>
                                                 <state key="normal" image="IMDb"/>
+                                                <connections>
+                                                    <action selector="onLinkBtnPressed:" destination="lPP-2i-dZK" eventType="touchUpInside" id="dkA-DU-IZz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
